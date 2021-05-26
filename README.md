@@ -1,6 +1,6 @@
 # README
 
-## users
+# users
 
 | Column             |  Type   | Options      |
 | ------------------ | ------  | -----------  | 
@@ -12,7 +12,7 @@
 | first_name_kana    | string  | null: false  |
 | last_name_kana     | string  | null: false  |
 | birth_day          | date    | null: false  |
-| company_name       | string  | null: false  |
+| company_name       | string  | null: false  |
 | profession_id      | integer | null: false  |
 
 ## Association
@@ -25,7 +25,7 @@
 
 
 
-## hotels
+# hotels
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
@@ -47,7 +47,7 @@ has_many   :hotel_comments
 
 
 
-## tourist_spots
+# tourist_spots
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
@@ -69,7 +69,7 @@ has_many :tourist_spot_comments
 
 
 
-## field_trips
+# field_trips
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
@@ -91,7 +91,7 @@ has_many :field_trip_comments
 
 
 
-## hotel_comments
+# hotel_comments
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
@@ -104,12 +104,12 @@ belongs_to :hotel
 
 
 
-## tourist_spot_comments
+# tourist_spot_comments
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
 | user             | references | foreign_key: true |
-| tourist_spot     | referensec | foreign_key: true | 
+| tourist_spot     | references | foreign_key: true | 
 
 ## Association
 belongs_to :user
@@ -118,12 +118,12 @@ belongs_to :tourist_spot
 
 
 
-## field_trip_comments
+# field_trip_comments
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
 | user             | references | foreign_key: true |
-| field_trip       | referensec | foreign_key: true | 
+| field_trip       | references | foreign_key: true | 
 
 ## Association
 belongs_to :user
