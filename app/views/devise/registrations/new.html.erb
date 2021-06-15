@@ -1,24 +1,37 @@
-<h2>Sign up</h2>
+<h2>新規登録</h2>
+<%= render "devise/shared/error_messages", resource: resource %>
+<%#= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+  
+  <div class='field'>
+    <label>ニックネーム</label></br>
+    <input autofocus="autofocus" placeholder="サッカー太郎"　class= "formcontrol" type="text" name="user[nickname]" id="user_name">
+  </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class='field'>
+    <label>メールアドレス</label></br>
+    <input autofocus="autofocus" placeholder="メールアドレス"　class= "formcontrol" type="email" name="user[email]" id="user_email">
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <label>パスワード(6文字以上)</label></br>
+    <input autocomplete="off" placeholder="パスワード" class="form-control" type="password" name="user[password]" id="user_password">
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <label>パスワード再確認</label></br>
+    <input autocomplete="off" placeholder="パスワードの確認" class="form-control" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+  </div>
+
+  <div class="field">
+    <label>所属先名</label></br>
+    <input autocomplete="off" placeholder="◯◯学校or株式会社◯◯" class="form-control" type="text" name="user[company_name]" id="user_company_name">
+  </div>
+
+  <div class="field">
+    <label>職業</label></br>
+    <%= f.collection_select(, , :id, :name, {}, {class:"", id:""}) %>
   </div>
 
   <div class="actions">
