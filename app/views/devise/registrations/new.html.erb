@@ -6,7 +6,7 @@
   
   <div class='field'>
     <label>ニックネーム</label></br>
-    <input autofocus="autofocus" placeholder="サッカー太郎"　class= "formcontrol" type="text" name="user[nickname]" id="user_name">
+    <input autofocus="autofocus" placeholder="旅好き太郎"　class= "formcontrol" type="text" name="user[nickname]" id="user_name">
   </div>
 
   <div class='field'>
@@ -30,8 +30,8 @@
   </div>
 
   <div class="field">
-    <label>職業</label></br>
-    
+    <label>職業</label>
+     <%= f.collection_select(:profession_id, Profession.all, :id, :name, {}, {class:""}) %>
   </div>
 
   <div class="actions">
