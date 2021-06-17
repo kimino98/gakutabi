@@ -18,7 +18,7 @@
     <%# 条件分岐 %>
       <ul class='lists-right'>
        <li><%= link_to "# ", "# ", class: "user-nickname" %></li>
-       <li><%= link_to 'ログアウト', "# ",  class: "logout" %></li> 
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
     
        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
