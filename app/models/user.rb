@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
+         extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :profession
 
   validates :profession_id, numericality: { other_than: 1 }
