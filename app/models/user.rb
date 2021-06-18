@@ -9,9 +9,6 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }
-    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-    validates :email, format: { with: VALID_EMAIL_REGEX }, 
-                      uniqueness: { case_sensitive: false }
     validates :password, format: { with: /\A[a-z0-9]+\z/ }
     validates :company_name
     validates :profession_id, numericality: { other_than: 1, message: 'を選択して下さい'}
