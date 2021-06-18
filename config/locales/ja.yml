@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        company_name: 所属先名
+        profession_id: 職業
+        

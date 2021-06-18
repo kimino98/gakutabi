@@ -14,6 +14,6 @@ class User < ApplicationRecord
                       uniqueness: { case_sensitive: false }
     validates :password, format: { with: /\A[a-z0-9]+\z/ }
     validates :company_name
-    validates :profession_id, numericality: { other_than: 1 }
+    validates :profession_id, numericality: { other_than: 1, message: 'を選択して下さい'}
   end
 end
