@@ -3,6 +3,6 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
-        company_name: 所属先名
-        profession_id: 職業
+        company_name: ご所属先名
+        profession_id: ご職業
         
