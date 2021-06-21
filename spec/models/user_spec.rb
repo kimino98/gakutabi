@@ -15,6 +15,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user).to be_valid
       end
+
+      it 'avatarが空でも登録できる' do
+        @user.avatar = ''
+        @user.valid?
+        expect(@user).to be_valid
+      end
     end
 
     context '登録ができないとき' do
