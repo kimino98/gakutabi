@@ -25,12 +25,17 @@
 
   <div class="form-group">
     <label>所属先名</label>
-    <%= f.text_field :company_name, class:'input-default', placeholder:"例) 〇〇中学校 株式会社◯◯", maxlength:"40" %>
+    <%= f.text_field :company_name, class:"input-default", placeholder:"例) 〇〇中学校 株式会社◯◯", maxlength:"40" %>
   </div>
 
   <div class="form-group">
     <label>職業</label>
      <%= f.collection_select(:profession_id, Profession.all, :id, :name, {}, {class:""}) %>
+  </div>
+
+  <div class="form-group">
+    <label>プロフィール写真</label>
+     <%= f.file_field :avatar, class:"input-default" %>
   </div>
 
   <div class="actions">

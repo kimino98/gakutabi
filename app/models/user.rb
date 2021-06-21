@@ -6,6 +6,8 @@ class User < ApplicationRecord
          
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :profession
+  
+  has_one_attached :avatar
 
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }
