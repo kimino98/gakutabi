@@ -78,7 +78,7 @@
 | profession_id      | integer | null: false  |
 
 ## Association
-- has_many :hotels
+- has_many :tweet
 - has_many :sightseeing_places
 - has_many :field_trip
 - has_many :hotel_comments
@@ -87,110 +87,44 @@
 
 
 
-# hotels
+# reviews
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
 | name             | string     | null: false       |
-| hotel_type_id    | integer    | null: false       |
+| hotel_type_id    | integer    | null; false       |
 | school_id        | integer    | null: false       | 
 | season_id        | integer    | null: false       |
-| profession_id    | integer    | null: false       |
 | region_id        | integer    | null: false       |
-| how_many_id      | integer    | null: false       |
+| count_id         | integer    | null: false       |
 | price            | integer    |                   |
-| text             | text       | null: false       |
-| user             | references | foreign_key: true |
-
-## Association
-belongs_to :user
-has_many   :hotel_comments
-
-
-
-
-# sightseeing_place
-
-| Column           |  Type      | Options           |
-| ---------------- | ---------  | ----------------- |
-| name             | string     | null: false       |
-| school_id        | integer    | null: false       | 
-| season_id        | integer    | null: false       |
-| profession_id    | integer    | null: false       |
-| region_id        | integer    | null: false       |
-| how_many_id      | integer    | null: false       |
-| price            | integer    |                   |
-| spot_genre       | string     |                   |
 | text             | text       | null: false       |
 | safety           | text       | null: false       |
 | user             | references | foreign_key: true |
 
 ## Association
 belongs_to :user
-has_many :sightseeing_place_comments
+has_many   :reviews_comments
 
 
 
 
-# field_trips
-
-| Column           |  Type      | Options           |
-| ---------------- | ---------  | ----------------- |
-| name             | string     | null: false       |
-| school_id        | integer    | null: false       | 
-| season_id        | integer    | null: false       |
-| profession_id    | integer    | null: false       |
-| region_id        | integer    | null: false       |
-| how_many_id      | integer    | null: false       |
-| price            | integer    |                   |
-| genre            | string     |                   |
-| text             | text       | null: false       |
-| user             | references | foreign_key: true |
-
-## Association
-belongs_to :user
-has_many :field_trip_comments
 
 
 
 
-# hotel_comments
+# reviews_comments
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
 | user             | references | foreign_key: true |
-| hotel            | references | foreign_key: true | 
+| review           | references | foreign_key: true | 
 
 ## Association
 belongs_to :user
-belongs_to :hotel
+belongs_to :review
 
 
-
-# tourist_spot_comments
-
-| Column           |  Type      | Options           |
-| ---------------- | ---------  | ----------------- |
-| user             | references | foreign_key: true |
-| tourist_spot     | references | foreign_key: true | 
-
-## Association
-belongs_to :user
-belongs_to :tourist_spot
-
-
-
-
-# field_trip_comments
-
-| Column           |  Type      | Options           |
-| ---------------- | ---------  | ----------------- |
-| user             | references | foreign_key: true |
-| field_trip       | references | foreign_key: true | 
-
-## Association
-belongs_to :user
-belongs_to :field_trip
 
 # likes
 
