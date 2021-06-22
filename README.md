@@ -74,17 +74,12 @@
 | nickname           | string  | null: false  |
 | email              | string  | unique: true |
 | encrypted_password | string  | null: false  |
-| first_name         | string  | null: false  |
-| last_name          | string  | null: false  |
-| first_name_kana    | string  | null: false  |
-| last_name_kana     | string  | null: false  |
-| birth_day          | date    | null: false  |
 | company_name       | string  | null: false  |
 | profession_id      | integer | null: false  |
 
 ## Association
 - has_many :hotels
-- has_many :tourist_spots
+- has_many :sightseeing_places
 - has_many :field_trip
 - has_many :hotel_comments
 - has_many :tourist_comments
@@ -114,7 +109,7 @@ has_many   :hotel_comments
 
 
 
-# tourist_spots
+# sightseeing_place
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
@@ -127,11 +122,12 @@ has_many   :hotel_comments
 | price            | integer    |                   |
 | spot_genre       | string     |                   |
 | text             | text       | null: false       |
+| safety           | text       | null: false       |
 | user             | references | foreign_key: true |
 
 ## Association
 belongs_to :user
-has_many :tourist_spot_comments
+has_many :sightseeing_place_comments
 
 
 

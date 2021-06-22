@@ -1,0 +1,2 @@
+class SightseeingPlace < ApplicationRecord
+end
