@@ -78,12 +78,9 @@
 | profession_id      | integer | null: false  |
 
 ## Association
-- has_many :tweet
-- has_many :sightseeing_places
-- has_many :field_trip
-- has_many :hotel_comments
-- has_many :tourist_comments
-- has_many :field_trip_comments
+- has_many :reviews
+- has_many :reviews_comments
+
 
 
 
@@ -93,7 +90,7 @@
 | ---------------- | ---------  | ----------------- |
 | name             | string     | null: false       |
 | hotel_type_id    | integer    | null; false       |
-| school_id        | integer    | null: false       | 
+| grade_id         | integer    | null: false       | 
 | season_id        | integer    | null: false       |
 | region_id        | integer    | null: false       |
 | count_id         | integer    | null: false       |
