@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+<div class="review-main">
+  <h1 class="page-title">宿泊行事を共有しよう<h1>
+  <%= form_with model: @review, local: true do |f| %>
+    
+    <div class="form-group">
+      <label>施設名</label>
+    <%= f.text_field :faclity_name, class:'input-default', placeholder:"〇〇ホテル 〇〇遊園地", maxlength:"40" %>
+    </div>
+
+    <div class="form-group">
+    <label>ホテルタイプ</label>
+     <%= f.collection_select(:hotel_type_id, Hotel_type.all, :id, :name, {}, {class:"hotel_type-select"}) %>
+  </div>
+
+    <div class="form-group">
+    <label>学年</label>
+     <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:""}) %>
+  </div>
+
+    <div class="form-group">
+    <label>季節</label>
+     <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:""}) %>
+  </div>
+
+    <div class="form-group">
+    <label>都道府県</label>
+     <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:""}) %>
+  </div>
+
+    <div class="form-group">
+    <label>学生人数</label>
+     <%= f.collection_select(:student_count_id, Student_count.all, :id, :name, {}, {class:""}) %>
+  </div>
+
+  <% end %> 
+</div>
