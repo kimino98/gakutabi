@@ -1,0 +1,20 @@
+.hotel_type-select {
+  height: 30px;
+  width: 250px;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="text_area"] {
+  width: 300px;
+  height: 40px;
+}
