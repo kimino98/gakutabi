@@ -42,23 +42,20 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :text, "感想" %><br />
-        <%= f.text_area :text, class:'input-default', placeholder:"感想", maxlength:"200" %>
-      </div>
-
-       <div class="form-group">
-         <%= f.label :text, "コロナ対策" %><br />
-         <%= f.text_area :text, class:'input-default', placeholder:"アクリル板が設置されてました"%>
+        <%= f.label :text, "感想"%> <br />
+        <%= f.text_area :text, class: "form-control", id: "exampleFormControlTextarea1", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやす" %>
        </div>
+
+      <div class="form-group">
+        <%= f.label :safety, "コロナ対策" %><br />
+        <%= f.text_area :safety, class: "form-control", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました" %>
+      </div>
       
       <div class="form-group">
         <%= f.label :images, "画像" %><br />
         <%= f.file_field :images, name: 'message[images][]', id: 'message_image' %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :safety, "コロナ対策" %><br />
-        <%= f.text_area :safety, class: "form-control", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました" %>
 
 
     <% end %> 

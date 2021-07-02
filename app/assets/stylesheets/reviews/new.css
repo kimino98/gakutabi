@@ -1,3 +1,4 @@
+
 .hotel_type-select {
   height: 30px;
   width: 250px;
@@ -7,6 +8,13 @@
   text-align: center;
   margin-top: 100px;
   margin-bottom: 25px;
+}
+
+.form_box {
+  width: 75%;
+  height: 100%;
+  background-color: #e7ecef;
+  border-radius: 10px;
 }
 
 input[type="text"] {
