@@ -1,38 +1,66 @@
 <%= render "shared/header" %>
 
 <div class="review-main">
-  <h1 class="page-title">宿泊行事を共有しよう<h1>
-  <%= form_with model: @review, local: true do |f| %>
-    
-    <div class="form-group">
-      <label>施設名</label>
-    <%= f.text_field :faclity_name, class:'input-default', placeholder:"〇〇ホテル 〇〇遊園地", maxlength:"40" %>
-    </div>
+    <h1 class="page-title">宿泊行事を共有しよう</h1>
+  <div class="form_box">
+    <%= form_with model: @review, local: true do |f| %>
 
-    <div class="form-group">
-    <label>ホテルタイプ</label>
-     <%= f.collection_select(:hotel_type_id, Hotel_type.all, :id, :name, {}, {class:"hotel_type-select"}) %>
+      
+      <div class="form-group">
+        <%= f.label :faclity_name, "施設名" %><br />
+        <%= f.text_field :faclity_name, class: "form-control", placeholder: "丸の内ホテル・東京遊園地" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :hotel_type_id, "ホテルタイプ" %><br />
+        <%= f.collection_select(:hotel_type_id, Hotel_type.all, :id, :name, {}, {class:"hotel_type-select"}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :grade_id, "学年" %><br />
+        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :season_id, "季節" %><br />
+        <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :region_id, "施設所在地" %><br />
+        <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :student_count_id, "学生人数" %><br />
+        <%= f.collection_select(:student_count_id, Student_count.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :text, "料金" %><br />
+        <%= f.text_field :price, class:"form-control", placeholder:"税込"%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :text, "感想" %><br />
+        <%= f.text_area :text, class:'input-default', placeholder:"感想", maxlength:"200" %>
+      </div>
+
+       <div class="form-group">
+         <%= f.label :text, "コロナ対策" %><br />
+         <%= f.text_area :text, class:'input-default', placeholder:"アクリル板が設置されてました"%>
+       </div>
+      
+      <div class="form-group">
+        <%= f.label :images, "画像" %><br />
+        <%= f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :safety, "コロナ対策" %><br />
+        <%= f.text_area :safety, class: "form-control", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました" %>
+
+
+    <% end %> 
   </div>
-
-    <div class="form-group">
-    <label>学年</label>
-     <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:""}) %>
-  </div>
-
-    <div class="form-group">
-    <label>季節</label>
-     <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:""}) %>
-  </div>
-
-    <div class="form-group">
-    <label>都道府県</label>
-     <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:""}) %>
-  </div>
-
-    <div class="form-group">
-    <label>学生人数</label>
-     <%= f.collection_select(:student_count_id, Student_count.all, :id, :name, {}, {class:""}) %>
-  </div>
-
-  <% end %> 
 </div>
