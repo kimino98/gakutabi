@@ -1,4 +1,4 @@
-class Student_count < ActiveHash::Base
+class StudentCount < ActiveHash::Base
   self.data = [
     { id: 1, name: '選択して下さい' },
     { id: 2, name: '1人〜10人' },

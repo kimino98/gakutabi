@@ -1,4 +1,4 @@
-class Hotel_type < ActiveHash::Base
+class HotelType < ActiveHash::Base
   self.data = [
     { id: 1, name: '選択して下さい' },
     { id: 2, name: '宿泊施設ではない' },
