@@ -6,4 +6,6 @@ class Review < ApplicationRecord
   belongs_to :region
   belongs_to :student_count
 
+  has_many_attached :images
+
 end

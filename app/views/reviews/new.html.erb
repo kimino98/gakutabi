@@ -52,11 +52,11 @@
       
       <div class="form-group">
         <%= f.label :images, "画像" %><br />
-        <%= f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+        <%= f.file_field :images, name: 'review[images][]', id: 'review_image' %>
       </div>
 
       <div class="actions">
-        <%= f.submit "投稿する", type: "button", class: "btn btn-outline-info" %>
+        <%= f.submit "投稿する", type: "button", class: "btn btn-outline-info", id: "submitnew" %>
       </div>
 
       <div id="image-list"></div>
