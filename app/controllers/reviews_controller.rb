@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to root_path
      else
+      flash[:alert] = '投稿に失敗しました'
       render :new
     end
   end
