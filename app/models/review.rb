@@ -8,4 +8,22 @@ class Review < ApplicationRecord
 
   has_many_attached :images
 
+  with_options presence: true do
+    validates :faclity_name, length: { maximum: 40 }
+    validates :images 
+    
+    with_options length: { maximum: 140 } do
+      validates :text
+      validates :safety
+    end
+    
+    with_options numericality: { other_than: 1,  message: 'を選択して下さい' } do
+      validates :hotel_type_id
+      validates :grade_id
+      validates :season_id
+      validates :region_id
+      validates :student_count_id
+    end
+  end
+  
 end

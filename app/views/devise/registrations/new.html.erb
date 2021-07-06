@@ -1,7 +1,7 @@
 <h2>新規登録</h2>
 
 <%= form_with model: @user, url: user_registration_path, class: "registration-main", local: true do |f| %>
- <%= render "devise/shared/error_messages", model: f.object %>
+ <%= render "shared/error_messages", model: f.object %>
   
   <div class='form-group'>
     <label>ニックネーム</label>
