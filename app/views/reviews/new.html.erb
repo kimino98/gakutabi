@@ -1,13 +1,15 @@
-<%= render "shared/header" %>
-
 <div class="review-main">
-    <h1 class="page-title">宿泊行事を共有しよう</h1>
+    <h1 class="page-title">新規投稿</h1>
   <div class="form_box">
     <%= form_with model: @review, local: true do |f| %>
 
+      
+        <%= render 'shared/error_messages', model: f.object %> 
+      
+
       <div class="form-group">
         <%= f.label :faclity_name, "施設名" %><br />
-        <%= f.text_field :faclity_name, class: "form-control", placeholder: "丸の内ホテル・東京遊園地" %>
+        <%= f.text_field :faclity_name, class: "form-control", placeholder: "丸の内ホテル・東京遊園地", maxlength:"40" %>
       </div>
       
       <div class="form-group">
@@ -42,12 +44,12 @@
 
       <div class="form-group">
         <%= f.label :text, "感想"%> <br />
-        <%= f.text_area :text, class: "form-control", id: "exampleFormControlTextarea1", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやすかったです。" %>
+        <%= f.text_area :text, class: "form-control", id: "exampleFormControlTextarea1", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやすかったです。", maxlength: "140" %>
        </div>
 
       <div class="form-group">
         <%= f.label :safety, "コロナ対策" %><br />
-        <%= f.text_area :safety, class: "form-control", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました。" %>
+        <%= f.text_area :safety, class: "form-control", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました。", maxlength: "140"%>
       </div>
       
       <div class="form-group">
