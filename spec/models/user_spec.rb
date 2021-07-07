@@ -98,7 +98,7 @@ RSpec.describe User, type: :model do
       it 'profession_idが空だと登録できない' do
         @user.profession_id = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include('ご職業を入力してください')
+        expect(@user.errors.full_messages).to include('ご職業を選択して下さい')
       end
       
       it 'profession_idが1だと登録できない' do
