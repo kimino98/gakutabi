@@ -25,5 +25,5 @@ class Review < ApplicationRecord
       validates :student_count_id
     end
   end
-  
+  validates :price, format: { with: /\A[0-9]+\z/ }
 end
