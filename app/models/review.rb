@@ -6,6 +6,7 @@ class Review < ApplicationRecord
   belongs_to :region
   belongs_to :student_count
 
+  belongs_to :user
   has_many_attached :images
 
   with_options presence: true do
