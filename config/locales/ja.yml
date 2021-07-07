@@ -11,7 +11,7 @@ ja:
         images: 写真
         text: 感想
         safety: コロナ対策
-        hotel_type_id: ホテルタイプ
+        hotel_type_id: 宿泊タイプ
         grade_id: 学年
         season_id: 季節
         region_id: 施設所在地
