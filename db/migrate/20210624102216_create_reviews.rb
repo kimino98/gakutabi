@@ -7,7 +7,7 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.integer :season_id,        null: false
       t.integer :region_id,        null: false
       t.integer :student_count_id, null: false
-      t.integer :price 
+      t.integer :price,            null: false
       t.text    :text,             null: false
       t.text    :safety,           null: false
       t.references :user,          foreign_key: true

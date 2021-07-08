@@ -11,7 +11,8 @@ class Review < ApplicationRecord
 
   with_options presence: true do
     validates :faclity_name, length: { maximum: 40 }
-    validates :images 
+    validates :images
+    validates :price, format: { with: /\A[0-9]+\z/ }
     
     with_options length: { maximum: 140 } do
       validates :text
@@ -26,5 +27,4 @@ class Review < ApplicationRecord
       validates :student_count_id
     end
   end
-  validates :price, format: { with: /\A[0-9]+\z/ }
 end
