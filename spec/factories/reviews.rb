@@ -6,7 +6,7 @@ FactoryBot.define do
     region_id        {Faker::Number.within(range: 2..47)}
     student_count_id {Faker::Number.within(range: 2..12)}
     season_id        {Faker::Number.within(range: 2..5)}
-    price            {Faker::Number.number}
+    price            {Faker::Number.number(digits: 4)}
     text             {Faker::Lorem.sentence}
     safety           {Faker::Lorem.sentence}
     association :user

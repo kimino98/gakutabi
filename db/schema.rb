@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_06_24_102216) do
     t.integer "season_id", null: false
     t.integer "region_id", null: false
     t.integer "student_count_id", null: false
-    t.integer "price"
+    t.integer "price", null: false
     t.text "text", null: false
     t.text "safety", null: false
     t.bigint "user_id"

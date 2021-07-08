@@ -10,6 +10,14 @@ RSpec.describe Review, type: :model do
       it '全ての情報が正しく入力されいるとき' do
         expect(@review).to be_valid
       end
+
+      it 'priceが空の場合投稿できない' do
+        @review.price = 900
+        @review.valid?
+        expect(@review).to be_valid
+      end
+
+
     end
 
     context '投稿が失敗するとき' do
@@ -85,13 +93,41 @@ RSpec.describe Review, type: :model do
         expect(@review.errors.full_messages).to include('生徒人数を選択して下さい')
       end
 
+      it 'textが空だと投稿できない' do
+        @review.text = ''
+        @review.valid?
+        expect(@review.errors.full_messages).to include('感想を入力してください')
+      end
+      
       it 'textが140文字以上だと投稿できない' do
         @review.text = 'テストです' * 140
         @review.valid?
         expect(@review.errors.full_messages).to include('感想は140文字以内で入力してください')
       end
 
+      it 'safety空がだと投稿できない' do
+        @review.safety = ''
+        @review.valid?
+        expect(@review.errors.full_messages).to include('コロナ対策を入力してください')
+      end
 
+      it 'safety140文字がだと投稿できない' do
+        @review.safety = 'テストです' * 140
+        @review.valid?
+        expect(@review.errors.full_messages).to include('コロナ対策は140文字以内で入力してください')
+      end
+
+      it 'imagesが空だと登録できない' do
+        @review.images = nil 
+        @review.valid?
+        expect(@review.errors.full_messages).to include('写真を入力してください')
+      end
+
+      it 'imagesが空だと登録できない' do
+        @review.price = １００ 
+        @review.valid?
+        expect(@review.errors.full_messages).to include('写真を入力してください')
+      end
     end
   end
 end
