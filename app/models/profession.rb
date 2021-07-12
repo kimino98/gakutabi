@@ -1,6 +1,6 @@
 class Profession < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '選択して下さい' },
     { id: 2, name: '小学校教諭' },
     { id: 3, name: '中学校教諭' },
     { id: 4, name: '高校教諭' },

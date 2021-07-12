@@ -1,0 +1,68 @@
+<div class="review-main">
+    <h1 class="page-title">新規投稿</h1>
+  <div class="form_box">
+    <%= form_with model: @review, local: true do |f| %>
+
+      
+        <%= render 'shared/error_messages', model: f.object %> 
+      
+
+      <div class="form-group">
+        <%= f.label :faclity_name, "施設名" %><br />
+        <%= f.text_field :faclity_name, class: "form-control", placeholder: "丸の内ホテル・東京遊園地", maxlength:"40" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :hotel_type_id, "ホテルタイプ" %><br />
+        <%= f.collection_select(:hotel_type_id, HotelType.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :grade_id, "学年" %><br />
+        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :season_id, "季節" %><br />
+        <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :region_id, "施設所在地" %><br />
+        <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :student_count_id, "学生人数" %><br />
+        <%= f.collection_select(:student_count_id, StudentCount.all, :id, :name, {}, {class:""}) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :text, "料金" %><br />
+        <%= f.text_field :price, class:"form-control", placeholder:"税込"%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :text, "感想"%> <span id="count">0</span>文字 <br />
+        <%= f.text_area :text, class: "form-control", id: "text_content", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやすかったです。", maxlength: "140" %>
+       </div>
+
+      <div class="form-group">
+        <%= f.label :safety, "コロナ対策" %><br />
+        <%= f.text_area :safety, class: "form-control", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました。", maxlength: "140"%>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :images, "画像" %><br />
+        <%= f.file_field :images, name: 'review[images][]', id: 'review_image' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "投稿する", class: "btn btn-outline-info", id: "submitnew" %>
+      </div>
+
+      <div id="image-list"></div>
+
+    <% end %> 
+  </div>
+</div>

@@ -2,109 +2,57 @@
   box-sizing: border-box;
 }
 
-.top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
-  display: flex;
-  background-color: #204060;
-  flex-direction: column;
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: #6096BA;
 }
 
-.search-bar-contents {
+.header-top-content {
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  line-height: 50px;
 }
 
 .gakutabi-icon {
-  width: 8vw;
-  margin-right: 8vw;
-}
-
-.search-form {
-  width: 65vw;
-  height: 5vh;
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.search-form>.input-box {
-  width: 100%;
-  height: 5vh;
-  padding-left: 10px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: #F0F0E0;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
-}
-
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
-
-.lists-left {
-  display: flex;
-  min-width: 200px;
-
-}
-
-.hotel-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #F0F0E0;
-}
-
-.tourist_spot-list {
-  text-decoration: none;
-  color: #F0F0E0;
-}
-
-.field_trip-list {
-  text-decoration: none;
-  color: #F0F0E0;
+  width: 5vw;
+  margin-right: 5vw;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
-}
-
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
-}
-
-
-.logout {
-  text-decoration: none;
-  color: #F0F0E0;
+  margin: 0 30px 0 auto;
 }
 
 .login {
   text-decoration: none;
-  line-height: 32px;
   margin-right: 3vw;
-  color: #F0F0E0;
+  color: whitesmoke;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #F0F0E0;
+  color: whitesmoke;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: whitesmoke;
+}
+
+.logout {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 3vw;
+}
+
+.post-btn {
+  text-decoration: none;
+  color: whitesmoke;
 }
