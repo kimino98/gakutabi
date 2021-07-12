@@ -10,14 +10,6 @@ RSpec.describe Review, type: :model do
       it '全ての情報が正しく入力されいるとき' do
         expect(@review).to be_valid
       end
-
-      it 'priceが空の場合投稿できない' do
-        @review.price = 900
-        @review.valid?
-        expect(@review).to be_valid
-      end
-
-
     end
 
     context '投稿が失敗するとき' do
@@ -36,61 +28,61 @@ RSpec.describe Review, type: :model do
       it 'hotel_type_idが空の場合投稿できない' do
         @review.hotel_type_id = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('宿泊タイプを選択して下さい')
+        expect(@review.errors.full_messages).to include('宿泊タイプを選択してください')
       end
 
       it 'hotel_type_idが1を場合投稿できない' do
         @review.hotel_type_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include('宿泊タイプを選択して下さい')
+        expect(@review.errors.full_messages).to include('宿泊タイプを選択してください')
       end
 
       it 'grade_idが空の場合投稿できない' do
         @review.grade_id = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('学年を選択して下さい')
+        expect(@review.errors.full_messages).to include('学年を選択してください')
       end
 
       it 'grade_idが1の場合投稿できない' do
         @review.grade_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include('学年を選択して下さい')
+        expect(@review.errors.full_messages).to include('学年を選択してください')
       end
 
       it 'season_idが空の場合投稿できない' do
         @review.season_id = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('季節を選択して下さい')
+        expect(@review.errors.full_messages).to include('季節を選択してください')
       end
 
       it 'season_idが1の場合投稿できない' do
         @review.season_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include('季節を選択して下さい')
+        expect(@review.errors.full_messages).to include('季節を選択してください')
       end
 
       it 'region_idが空の場合投稿できない' do
         @review.region_id = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('施設所在地を選択して下さい')
+        expect(@review.errors.full_messages).to include('施設所在地を選択してください')
       end
 
       it 'region_idが1の場合投稿できない' do
         @review.region_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include('施設所在地を選択して下さい')
+        expect(@review.errors.full_messages).to include('施設所在地を選択してください')
       end
 
       it 'student_count_idが空の場合投稿できない' do
         @review.student_count_id = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('生徒人数を選択して下さい')
+        expect(@review.errors.full_messages).to include('生徒人数を選択してください')
       end
 
       it 'student_count_idが1の場合投稿できない' do
         @review.student_count_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include('生徒人数を選択して下さい')
+        expect(@review.errors.full_messages).to include('生徒人数を選択してください')
       end
 
       it 'textが空だと投稿できない' do
@@ -117,17 +109,30 @@ RSpec.describe Review, type: :model do
         expect(@review.errors.full_messages).to include('コロナ対策は140文字以内で入力してください')
       end
 
-      it 'imagesが空だと登録できない' do
+      it 'imagesが空だと投稿できない' do
         @review.images = nil 
         @review.valid?
         expect(@review.errors.full_messages).to include('写真を入力してください')
       end
 
-      it 'imagesが空だと登録できない' do
-        @review.price = １００ 
+      it 'priceが空だと投稿できない' do
+        @review.price = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include('写真を入力してください')
+        expect(@review.errors.full_messages).to include('料金を入力してください')
       end
+
+      it 'priceが全角だと投稿できない' do
+        @review.price = '３００'
+        @review.valid?
+        expect(@review.errors.full_messages).to include('料金は数値で入力してください')
+      end
+
+      it 'priceが設定上限を超えた場合投稿できない' do
+        @review.price = 10_000_000
+        @review.valid?
+        expect(@review.errors.full_messages).to include('料金は9999999以下の値にしてください')
+      end
+
     end
   end
 end
