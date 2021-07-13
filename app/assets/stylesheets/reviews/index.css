@@ -7,10 +7,26 @@
 }
 
 .c {
-  height: 60%;
-  width: 60%;
+  height: 70%;
+  width: 70%;
   margin: 0 auto;
   padding-top: 100px;
-  
+}
+
+.b {
+  position: relative;
+}
+
+.b p {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.user-img {
+  border-radius: 50%;
+  width:  100px;
+  height: 100px;
 }
 

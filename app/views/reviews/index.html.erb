@@ -1,51 +1,48 @@
 <div class="main">
   <div class="a">
-    <div class="b"><img class="c" src="assets/photo1.jpg"></div>
+    <div class="b">
+      <img class="c" src="assets/photo1.jpg">
+      <p>GAKUTABI</p>
+    </div>
     <div class="b"><img class="c" src="assets/photo2.jpg"></div>
     <div class="b"><img class="c" src="assets/photo3.jpg"></div>
     <div class="b"><img class="c" src="assets/photo4.jpg"></div>
   </div>
 
-  <div class="contents">
-    <%# <% @reviews.each do |review| %> 
-      <div class="tweet_box">
-        <%# ユーザー情報 %>
-        <div class="review_box_user">
-          <div class="review_user">
-            <div class="review_user_img">
-              <%= link_to image_tag("default-icon.png", class:"default-icon"), "root_path" %>
-            </div>
-            <div class="review_user_name">
-            </div>
-          </div>
-          <div class="icon">
-          </div>
-        </div>
+  <div class="review-contents">
+    <% @reviews.each do |review| %>
 
-        <%# タイトル・どの業種の呟きか %>
-        <div class="review_box_name">
-          <div class="review_name">
-          </div>
-          <div class="review_user_professtion">
-          </div>
-        </div>
-
-        <%# 投稿した写真 %>
-        <div class="review_box_img">
-        </div>
-
-        <%# タグ・いいね・コメント %>
-        <div class="review_box_info">
-          <div class="tag_info">
-          <div class="review_box_flex">
-            <div class="like">
-            </div>
-            <div class="comment">
-            </div>
-            <div class ="created_at_info">
-            </div>
-        </div>
+      <div class="review_user__img">
+        <%if review.user.avatar.attached?%>
+          <%=link_to (image_tag review.user.avatar, class: "user-img"), "#"%>
+        <%else%>
+          <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+        <%end%>
       </div>
-    <%# <% end %> 
+
+      <div class="review-user">
+        <%= review.user.nickname %>
+      </div>
+
+      <div class="review-profession">
+        <%= review.user.profession.name %>
+      </div>
+
+      <div class="review-grade">
+        <%= review.grade.name %>
+      
+      </div>
+      <div class="review-gear">
+        <i class="fas fa-cog" id="lists"></i>
+      </div>
+
+      <div class="review-faclity_name">
+        <%= review.faclity_name %>
+      </div>
+
+      <div class="review-imgs">
+        
+      </div>
+    <% end %>
   </div>
 </div>
