@@ -98,7 +98,7 @@
   margin-bottom: 10px;
 }
 
-.review-contents .review-box .review-imgs .review-img {
+.review-contents .review-box .review-image .review-img {
   width: 100%;
   height: 100%;
 }
@@ -121,7 +121,7 @@
   text-align: right;
   position: absolute;
   bottom: 1px;
-  left: 745px;
+  left: 740px;
   font-size: medium;
   margin-bottom: 3px;
 }

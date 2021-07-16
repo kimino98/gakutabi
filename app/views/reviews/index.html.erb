@@ -6,6 +6,7 @@
     <div class="introduction"><img class="introduction-img" src="assets/photo4.jpg"></div>
   </div>
 
+  
   <div class="review-contents">
     <% @reviews.each do |review| %>
       <div class="review-box">
@@ -40,7 +41,7 @@
         <div class="tag_name">
           タグ:
         </div>
-        <div class="review-imgs">
+        <div class="review-image">
           <%=link_to (image_tag review.images[0] , class: "review-img"), "#"%>
         </div>
         <div class="review-lower">
