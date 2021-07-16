@@ -117,12 +117,7 @@
 }
 
 .review-contents .review-box .review-lower .review-info .post-time {
-  height: auto;
-  text-align: right;
-  position: absolute;
-  bottom: 1px;
-  left: 740px;
+  float: right;
   font-size: medium;
-  margin-bottom: 3px;
 }
 /*# sourceMappingURL=index.css.map */
