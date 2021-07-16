@@ -1,55 +1,62 @@
 <div class="main">
-  <div class="a">
-    <div class="b">
-      <img class="c" src="assets/photo1.jpg">
-      <p>GAKUTABI</p>
-    </div>
-    <div class="b"><img class="c" src="assets/photo2.jpg"></div>
-    <div class="b"><img class="c" src="assets/photo3.jpg"></div>
-    <div class="b"><img class="c" src="assets/photo4.jpg"></div>
+  <div class="introduction-box">
+    <div class="introduction"><img class="introduction-img" src="assets/photo1.jpg"></div>
+    <div class="introduction"><img class="introduction-img" src="assets/photo2.jpg"></div>
+    <div class="introduction"><img class="introduction-img" src="assets/photo3.jpg"></div>
+    <div class="introduction"><img class="introduction-img" src="assets/photo4.jpg"></div>
   </div>
 
   <div class="review-contents">
     <% @reviews.each do |review| %>
-      <div class="review-upper-row">
-        <div class="review_user__img">
-          <%if review.user.avatar.attached?%>
-            <%=link_to (image_tag review.user.avatar, class: "user-img"), "#"%>
-          <%else%>
-            <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
-          <%end%>
-        </div>
+      <div class="review-box">
+        <div class="review-upper-row">
+          <div class="review_user__img">
+            <%if review.user.avatar.attached?%>
+              <%=link_to (image_tag review.user.avatar, class: "user-img"), "#"%>
+            <%else%>
+              <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+            <%end%>
+          </div>
 
-        <div class="review-user">
-          <%= review.user.nickname %>
-        </div>
+          <div class="review-nickname">
+            <%= review.user.nickname %>
+          </div>
 
-        <div class="review-profession">
-          <%= review.user.profession.name %>
-        </div>
+          <div class="review-profession">
+            <p>職業：<%= review.user.profession.name %></p>
+          </div>
 
-        <div class="review-grade">
-          <%= review.grade.name %>
-        
+          <div class="review-gear">
+            <i class="fas fa-cog" id="lists"></i>
+            <i class="fas fa-trash-alt"></i>
+          </div>
         </div>
-        <div class="review-gear">
-          <i class="fas fa-cog" id="lists"></i>
+         
+        <div class="review-title">
+          <div class="review-faclity_name">
+            <p>施設名：<%= review.faclity_name %><p>
+          </div>
         </div>
-
+        <div class="tag_name">
+          タグ:
+        </div>
+        <div class="review-imgs">
+          <%=link_to (image_tag review.images[0] , class: "review-img"), "#"%>
+        </div>
+        <div class="review-lower">
+          <div class="review-info">
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment-dots"></i>
+            <div class="post-time">
+              <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="review-title">
-        <div class="review-faclity_name">
-          <%= review.faclity_name %>
-        </div>
-      </div>
-      <div class="review-imgs">
-        <>
-
-      </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
 
 <div class="pagenation-box">
-<%= paginate @reviews %>
+  <%= paginate @reviews %>
 </div>

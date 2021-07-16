@@ -1,9 +1,9 @@
 $(function() {
-  $('.a').slick({
+  $('.introduction-box').slick({
       dots: true,
   });
 
   $('.slick-dots li').on('mouseover', function() {
-    $('.a').slick('goTo', $(this).index());
+    $('.introduction-box').slick('goTo', $(this).index());
   });
 });
