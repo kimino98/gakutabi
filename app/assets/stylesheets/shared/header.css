@@ -1,58 +1,64 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-header {
+.header {
   width: 100%;
-  height: 10vh;
-  background-color: #6096BA;
+  height: 100px;
+  background-color: #364e96;
 }
 
-.header-top-content {
-  width: 100vw;
+.header .header-top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 50px;
 }
 
-.gakutabi-icon {
-  width: 5vw;
-  margin-right: 5vw;
-  margin-top: 15px;
-  margin-left: 10px;
+.header .header-top-content .header-icon .icon {
+  width: 100px;
 }
 
-.lists-right {
-  display: flex;
-  list-style: none;
-  margin: 0 30px 0 auto;
+.header .header-top-content .nav {
+  margin-left: auto;
 }
 
-.login {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: whitesmoke;
+.header .header-top-content .nav .lists-right {
+  float: right;
+  margin: auto 0;
 }
 
-.sign-up {
+.header .header-top-content .nav .lists-right li {
+  display: inline-block;
+}
+
+.header .header-top-content .nav .lists-right li .user-nickname {
   text-decoration: none;
   color: whitesmoke;
+  margin-right: 10px;
 }
 
-.user-nickname {
+.header .header-top-content .nav .lists-right li .logout {
   text-decoration: none;
-  margin-right: 3vw;
   color: whitesmoke;
+  margin-right: 10px;
 }
 
-.logout {
+.header .header-top-content .nav .lists-right li .post-btn {
   text-decoration: none;
   color: whitesmoke;
-  margin-right: 3vw;
+  margin-right: 10px;
 }
 
-.post-btn {
+.header .header-top-content .nav .lists-right li .login {
   text-decoration: none;
   color: whitesmoke;
+  margin-right: 10px;
 }
+
+.header .header-top-content .nav .lists-right li .sign-up {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=header.css.map */

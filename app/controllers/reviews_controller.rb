@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+    @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
