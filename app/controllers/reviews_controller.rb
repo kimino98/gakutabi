@@ -28,6 +28,10 @@ class ReviewsController < ApplicationController
      end
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
   private
   def review_params
     params.require(:review).permit(:faclity_name, :hotel_type_id, :grade_id, :season_id, :region_id, :student_count_id, :price, :text, :safety, images: []).merge(user_id: current_user.id)
