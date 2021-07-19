@@ -1,0 +1,37 @@
+.review-impression-box .review-impression {
+  margin-top: 50px;
+}
+
+.review-impression-box .review-impression .impression-title {
+  margin: 0 350px 0 350px;
+}
+
+.review-impression-box .review-impression .impression-title h3 {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.review-impression-box .review-corona .corona-title {
+  margin: 10px 300px 0 300px;
+}
+
+.review-impression-box .review-corona .corona-title h3 {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.review-detail .detail-title {
+  margin: 10px 350px 0 350px;
+}
+
+.review-detail .detail-title h3 {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+/*# sourceMappingURL=show.css.map */

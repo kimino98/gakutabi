@@ -35,16 +35,24 @@
 
     <div class="review-impression-box">
       <div class="review-impression">
-        <h3>感想</h3>
-        <%= @review.text%>
+        <div class="impression-title">
+          <h3>感想</h3>
+        </div>
+        <div class="inpression-comment">
+          <%= @review.text%>
+        </div>
       </div>
       <div class="review-corona">
-        <h3>コロナウイルス対策</h3>
-        <%= @review.safety%>
+        <div class="corona-title">
+          <h3>コロナウイルス対策</h3>
+        </div>
+        <div class="corona-comment">
+          <%= @review.safety%>
+        </div>
       </div>
     </div>
     <div class="review-detail">
-      <div class=detail-title>
+      <div class="detail-title">
         <h3>詳細</h3>
       </div>
 
@@ -77,8 +85,6 @@
         <p>料金</p>
         <%= @review.price%>円
       </div>
-
-
     </div>
   </div>
   </div>
