@@ -1,5 +1,5 @@
 $(function() {
-  $('.introduction-box').slick({
+  $('.slider-box').slick({
       dots: true,
   });
 
