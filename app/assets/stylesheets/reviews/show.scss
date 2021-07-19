@@ -22,13 +22,68 @@
     }
   }
 }
-.review-detail {
+.review-detail-box {
   .detail-title {
     margin: 10px 350px 0 350px;
     h3 {
       text-align: center;
       background: linear-gradient(transparent 30%,rgba(247, 198, 104, 0.2) 30%,rgb(247, 198, 104) 65%,rgba(247, 198, 104, 0.2));
       font-weight: bold;
+    }
+  }
+  .review-detail {
+    display: flex;
+    justify-content: space-around;
+
+    .hotel_type-info {
+      text-align: center;
+      p {
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+  font-weight: bold
+      }
+    }
+
+    .grade-info {
+      text-align: center;
+      p {
+        text-align: center;
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+  font-weight: bold
+      }
+    }
+
+    .season-info {
+      text-align: center;
+      p {
+        text-align: center;
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+        font-weight: bold
+      }
+    }
+
+    .region-info {
+      text-align: center;
+      p {
+        text-align: center;
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+        font-weight: bold
+      }
+    }
+
+    .student_count-info {
+      p {
+        text-align: center;
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+        font-weight: bold
+      }
+    }
+
+    .price-info {
+      p {
+        text-align: center;
+        box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+        font-weight: bold
+      }
     }
   }
 }

@@ -51,39 +51,40 @@
         </div>
       </div>
     </div>
-    <div class="review-detail">
+    <div class="review-detail-box">
       <div class="detail-title">
         <h3>詳細</h3>
       </div>
+      <div class="review-detail">
+        <div class="hotel_type-info">
+          <p>ホテルタイプ</p>
+          <% if @review.hotel_type_id == 2 %>
+            <p>-</p>
+          <%else%>
+            <%= @review.hotel_type.name %>
+          <% end %>
+        </div>
 
-      <div class="hotel_type-info">
-        <p>ホテルタイプ</p>
-        <% if @review.hotel_type_id == 2 %>
-          <p>-</p>
-         <%else%>
-          <%= @review.hotel_type.name %>
-        <% end %>
-      </div>
-
-      <div class="grade-info">
-        <p>学年</p>
-        <%= @review.grade.name%>
-      </div>
-      <div class="season-info">
-        <p>利用した時期</p>
-        <%= @review.season.name%>
-      </div>
-      <div class="region-info">
-        <p>施設所在地</p>
-        <%= @review.region.name%>
-      </div>
-      <div class="student_count-info">
-        <p>参加生徒：</p>
-        <%=@review.student_count.name%>
-      </div>
-      <div class="price-info">
-        <p>料金</p>
-        <%= @review.price%>円
+        <div class="grade-info">
+          <p>学年</p>
+          <%= @review.grade.name%>
+        </div>
+        <div class="season-info">
+          <p>利用した時期</p>
+          <%= @review.season.name%>
+        </div>
+        <div class="region-info">
+          <p>施設所在地</p>
+          <%= @review.region.name%>
+        </div>
+        <div class="student_count-info">
+          <p>参加生徒</p>
+          <%=@review.student_count.name%>
+        </div>
+        <div class="price-info">
+          <p>料金</p>
+          <%= @review.price%>円
+        </div>
       </div>
     </div>
   </div>
