@@ -51,10 +51,18 @@
   font-weight: 800;
 }
 
-.review-contents .review-box .review-upper-row .user-img {
-  border-radius: 50%;
+.review-contents .review-box .review-upper-row .review_user__img {
   width: 50px;
-  margin: auto 10px;
+  height: 50px;
+}
+
+.review-contents .review-box .review-upper-row .review_user__img .user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .review-contents .review-box .review-upper-row .review-nickname {
