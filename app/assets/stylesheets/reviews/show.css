@@ -1,5 +1,6 @@
 .review-impression-box .review-impression {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .review-impression-box .review-impression .impression-title {
@@ -7,10 +8,15 @@
 }
 
 .review-impression-box .review-impression .impression-title h3 {
+  margin-bottom: 20px;
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
   background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
   font-weight: bold;
+}
+
+.review-impression-box .review-corona {
+  margin-bottom: 20px;
 }
 
 .review-impression-box .review-corona .corona-title {
@@ -18,6 +24,7 @@
 }
 
 .review-impression-box .review-corona .corona-title h3 {
+  margin-bottom: 20px;
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
   background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
@@ -25,7 +32,7 @@
 }
 
 .review-detail-box .detail-title {
-  margin: 10px 350px 0 350px;
+  margin: 10px 350px 20px 350px;
 }
 
 .review-detail-box .detail-title h3 {
@@ -36,7 +43,6 @@
 }
 
 .review-detail-box .review-detail {
-  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
