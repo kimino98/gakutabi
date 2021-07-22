@@ -29,7 +29,9 @@
 
           <%if user_signed_in? && current_user.id==review.user.id%>
             <div class="review-gear">
-              <i class="fas fa-cog" id="lists"></i>
+              <%= link_to(edit_review_path(review.id)) do %>
+                <i class="fas fa-cog" id="lists"></i>
+              <%end%>
               <%= link_to(review_path(review.id), method: :delete, data: { confirm: '本当に削除しますか'} ) do %>
                 <i class="fas fa-trash-alt"></i>
               <% end %>
