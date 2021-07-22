@@ -43,7 +43,12 @@
       </div>
     </div>
 
-    
+    <%if user_signed_in? && current_user.id==@review.user.id%>
+      <div class="event_button">
+        <button type="button" class="btn btn-success">編集する</button>
+        <%= link_to "削除する", review_path(@review), method: :delete, class: "btn btn-danger",data: { confirm: '本当に削除しますか?' } %>
+      </div>
+    <% end %>
 
     <div class="review-impression-box">
       <div class="review-impression">
