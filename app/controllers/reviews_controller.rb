@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:destroy, :show, :edit]
+  before_action :set_review, only: [:destroy, :show, :edit, :update]
 
   def index
     @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -31,11 +31,19 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
-    
+  end
+
+  def update
+    if @review.update(review_params)
+      flash[:notice] = '編集に成功しました'
+      redirect_to root_path
+     else
+      flash[:alert] = '編集に失敗しました'
+      render :edit
+    end
   end
 
   private
