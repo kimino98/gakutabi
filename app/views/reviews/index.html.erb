@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="introduction-box">
+  <div class="slider-box">
     <div class="introduction"><img class="introduction-img" src="assets/photo1.jpg"></div>
     <div class="introduction"><img class="introduction-img" src="assets/photo2.jpg"></div>
     <div class="introduction"><img class="introduction-img" src="assets/photo3.jpg"></div>
@@ -45,9 +45,11 @@
         <div class="tag_name">
           タグ:
         </div>
-        <div class="review-image">
-          <%=link_to (image_tag review.images[0] , class: "review-img"), "#"%>
-        </div>
+        <%=link_to(review_path(review)) do%>
+          <div class="review-image">
+            <%= image_tag review.images[0], class: "review-img"%>
+          </div>
+        <% end %>
         <div class="review-lower">
           <div class="review-info">
             <i class="far fa-heart"></i>

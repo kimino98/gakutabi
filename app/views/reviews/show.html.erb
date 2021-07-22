@@ -1,0 +1,109 @@
+<div class="review-contents">
+  <div class="review-box">
+    <div class="review-upper-row">
+      <div class="review_user__img">
+        <%if @review.user.avatar.attached?%>
+          <%=link_to (image_tag @review.user.avatar, class: "user-img"), "#"%>
+         <%else%>
+          <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+        <%end%>
+      </div>
+      
+      <div class="review-nickname">
+        <%= @review.user.nickname %>さんの投稿
+      </div>
+      <div class="review-profession">
+        <p>職業：<%= @review.user.profession.name %></p>
+      </div>
+    </div>
+
+    <div class="review-title">
+      <div class="review-faclity_name">
+        <p>施設名：<%= @review.faclity_name %><p>
+      </div>
+    </div>
+
+    <div class="tag_name">
+      タグ:
+    </div>
+
+    <div class="slider-box">
+      <% @review.images.each do |image| %>
+        <%=image_tag image ,class: "slider-img"%>
+      <%end%>
+    </div>
+
+    <div class="review-lower">
+      <div class="review-info">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment-dots"></i>
+        <div class="post-time">
+          <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(@review.created_at) %>前に投稿
+        </div>
+      </div>
+    </div>
+
+    <%if user_signed_in? && current_user.id==@review.user.id%>
+      <div class="event_button">
+        <button type="button" class="btn btn-success">編集する</button>
+        <%= link_to "削除する", review_path(@review), method: :delete, class: "btn btn-danger",data: { confirm: '本当に削除しますか?' } %>
+      </div>
+    <% end %>
+
+    <div class="review-impression-box">
+      <div class="review-impression">
+        <div class="impression-title">
+          <h3>感想</h3>
+        </div>
+        <div class="inpression-comment">
+          <%= @review.text%>
+        </div>
+      </div>
+      <div class="review-corona">
+        <div class="corona-title">
+          <h3>コロナウイルス対策</h3>
+        </div>
+        <div class="corona-comment">
+          <%= @review.safety%>
+        </div>
+      </div>
+    </div>
+    <div class="review-detail-box">
+      <div class="detail-title">
+        <h3>詳細</h3>
+      </div>
+      <div class="review-detail">
+        <div class="hotel_type-info">
+          <p>ホテルタイプ</p>
+          <% if @review.hotel_type_id == 2 %>
+            -
+          <%else%>
+            <%= @review.hotel_type.name %>
+          <% end %>
+        </div>
+
+        <div class="grade-info">
+          <p>学年</p>
+          <%= @review.grade.name%>
+        </div>
+        <div class="season-info">
+          <p>利用した時期</p>
+          <%= @review.season.name%>
+        </div>
+        <div class="region-info">
+          <p>施設所在地</p>
+          <%= @review.region.name%>
+        </div>
+        <div class="student_count-info">
+          <p>参加生徒</p>
+          <%=@review.student_count.name%>
+        </div>
+        <div class="price-info">
+          <p>料金</p>
+          <%= @review.price%>円
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

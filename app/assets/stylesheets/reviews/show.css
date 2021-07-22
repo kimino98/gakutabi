@@ -1,0 +1,115 @@
+.event_button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.review-impression-box .review-impression {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.review-impression-box .review-impression .impression-title {
+  margin: 0 350px 0 350px;
+}
+
+.review-impression-box .review-impression .impression-title h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.review-impression-box .review-corona {
+  margin-bottom: 20px;
+}
+
+.review-impression-box .review-corona .corona-title {
+  margin: 10px 300px 0 300px;
+}
+
+.review-impression-box .review-corona .corona-title h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.review-detail-box .detail-title {
+  margin: 10px 350px 20px 350px;
+}
+
+.review-detail-box .detail-title h3 {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.review-detail-box .review-detail .hotel_type-info {
+  text-align: center;
+}
+
+.review-detail-box .review-detail .hotel_type-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail .grade-info {
+  text-align: center;
+}
+
+.review-detail-box .review-detail .grade-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail .season-info {
+  text-align: center;
+}
+
+.review-detail-box .review-detail .season-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail .region-info {
+  text-align: center;
+}
+
+.review-detail-box .review-detail .region-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail .student_count-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
+.review-detail-box .review-detail .price-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+/*# sourceMappingURL=show.css.map */

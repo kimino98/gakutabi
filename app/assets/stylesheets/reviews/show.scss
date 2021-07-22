@@ -1,0 +1,93 @@
+@mixin detail-title {
+  text-align: center;
+  background: linear-gradient(transparent 30%,rgba(247, 198, 104, 0.2) 30%,rgb(247, 198, 104) 65%,rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+@mixin detail-info {
+  text-align: center;
+  box-shadow: 0px -6px 5px -3px rgba(247,198,104,0.8) inset,0px 7px 5px -8px #f7c668;
+  font-weight: bold
+}
+
+.event_button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.review-impression-box {
+  .review-impression {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    .impression-title {
+      margin: 0 350px 0 350px;
+      h3 {
+        margin-bottom: 20px;
+        @include detail-title;
+      }
+    }
+  }
+
+  .review-corona {
+    margin-bottom: 20px;
+    .corona-title {
+      margin: 10px 300px 0 300px;
+      h3 {
+        margin-bottom: 20px;
+        @include detail-title;
+      }
+    }
+  }
+}
+.review-detail-box {
+  .detail-title {
+    margin: 10px 350px 20px 350px;
+    h3 {
+      @include detail-title;
+    }
+  }
+  .review-detail {
+    display: flex;
+    justify-content: space-around;
+
+    .hotel_type-info {
+      text-align: center;
+      p {
+        @include detail-info;
+      }
+    }
+
+    .grade-info {
+      text-align: center;
+      p {
+        @include detail-info;
+      }
+    }
+
+    .season-info {
+      text-align: center;
+      p {
+        @include detail-info;
+      }
+    }
+
+    .region-info {
+      text-align: center;
+      p {
+        @include detail-info;
+      }
+    }
+
+    .student_count-info {
+      p {
+        @include detail-info;
+      }
+    }
+
+    .price-info {
+      p {
+        @include detail-info;
+      }
+    }
+  }
+}

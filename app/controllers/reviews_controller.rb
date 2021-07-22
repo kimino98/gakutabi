@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
+      flash[:notice] = '投稿に成功しました'
       redirect_to root_path
      else
       flash[:alert] = '投稿に失敗しました'
@@ -26,6 +27,10 @@ class ReviewsController < ApplicationController
       flash[:alert] = '削除に失敗しました'
       redirect_to root_path
      end
+  end
+
+  def show
+    @review = Review.find(params[:id])
   end
 
   private

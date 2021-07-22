@@ -1,4 +1,5 @@
-  
+  $index-color:#364e96;
+
   .default-icon {
     width: 50px;
     height: 50px;
@@ -44,7 +45,7 @@
         height: 70px;
         display: flex;
         position: relative;
-        border: solid 3px #364e96;
+        border: solid 3px $index-color;
         padding: 0.5em;
         border-radius: 0.5em;
         font-weight: 800;
@@ -80,6 +81,7 @@
         text-align: right;
         
         .fas {
+          color: black;
           margin-right: 5px;
           font-size: 20px;
         }
@@ -89,10 +91,10 @@
     }
     .review-title {
       font-size: 25px;
-      background-color: #364e96;
+      background-color: $index-color;
       color: #ffff;/*文字色*/
       font-weight: 600;
-      border: solid 3px #364e96;
+      border: solid 3px $index-color;
       border-radius: 0.5em;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -113,7 +115,7 @@
     }
     
     .review-lower {
-      border: solid 3px #364e96;
+      border: solid 3px $index-color;
       padding: 0.5em;
       border-radius: 0.5em;
       margin-top: 10px;
