@@ -43,13 +43,13 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :text, "感想"%> <span>文字</span><br />
-        <%= f.text_area :text, class: "form-control", id: "text_content", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやすかったです。", maxlength: "140" %>
-       </div>
+        <%= f.label :text, "感想"%> (現在：<span id="text_langth"></span>文字)<br />
+        <%= f.text_area :text, class: "form-control", id: "text_area", rows: "5", placeholder: "(例)一校一館で一般のお客様の事を心配しなくてとても良かってです。部屋割りも教員で考える事ができ、男女別フロアなどが可能でした。夜は広場でエイサー鑑賞ができるなど充実した体験でした。廊下が一直線のため夜の見回りもしやすかったです。", maxlength: "140" %>
+      </div>
 
       <div class="form-group">
-        <%= f.label :safety, "コロナ対策" %> <span>文字</span> <br />
-        <%= f.text_area :safety, class: "form-control", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました。", maxlength: "140"%>
+        <%= f.label :safety, "コロナ対策" %> (現在：<span id="safety_langth"></span>文字)<br />
+        <%= f.text_area :safety, class: "form-control", id: "safety_area", rows: "5", placeholder: "(例)食事会場は１席空けて座り、アクリル板が設置されてました。", maxlength: "140"%>
       </div>
       
       <div class="form-group">
