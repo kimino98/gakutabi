@@ -1,5 +1,5 @@
 <div class="review-main">
-    <h1 class="page-title">新規投稿</h1>
+    <h1 class="page-title">編集</h1>
   <div class="form_box">
     <%= form_with model: @review, local: true do |f| %>
 
@@ -58,7 +58,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "投稿する", class: "btn btn-outline-info", id: "submitnew" %>
+        <%= f.submit "更新する", class: "btn btn-outline-info", id: "submitnew" %>
       </div>
 
       <div id="image-list"></div>
@@ -66,4 +66,3 @@
     <% end %> 
   </div>
 </div>
-
