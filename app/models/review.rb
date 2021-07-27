@@ -8,6 +8,7 @@ class Review < ApplicationRecord
 
   belongs_to :user
   has_many_attached :images
+  has_many :comments
 
   with_options presence: true do
     validates :faclity_name, length: { maximum: 40 }

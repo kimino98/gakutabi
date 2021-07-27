@@ -1,13 +1,17 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-         
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :profession
+
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   
+  #投稿写真
   has_one_attached :avatar
+
+  #コメント機能
+  has_many :conmments
 
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }
