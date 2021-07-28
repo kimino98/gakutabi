@@ -166,6 +166,14 @@
   margin-left: 15px;
 }
 
+.comment-box .comment-list .comment-area .comment-trah {
+  text-align: right;
+}
+
+.comment-box .comment-list .comment-area .comment-trah .fas {
+  color: black;
+}
+
 .comment-box .comment-list .comment-area .comment-content {
   margin-top: 10px;
 }

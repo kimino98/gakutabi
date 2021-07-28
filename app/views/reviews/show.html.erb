@@ -140,8 +140,15 @@
           <div class="comment-content">
             <%= comment.content %>
           </div>
+          <%if current_user==comment.user%>
+            <div class="comment-trah">
+              <%= link_to(review_comment_path(@review, comment), method: :delete, data: { confirm: 'コメントを削除しますか'}) do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <%end%>
           <div class="comment-time">
-            <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(comment.created_at) %>前にコメント
+            <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(comment.created_at) %>前
           </div>
         </div>
       <% end %>

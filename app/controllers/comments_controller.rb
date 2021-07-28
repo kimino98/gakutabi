@@ -8,6 +8,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:review_id])
+    comment = @review.comments.find(params[:id])
+    if current_user.id == comment.user.id
+      comment.destroy
+      redirect_back(fallback_location: root_path)
+    else
+      render "review/show"
+    end
+  end
+
 
 
   private
