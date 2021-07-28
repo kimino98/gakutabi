@@ -112,4 +112,65 @@
           box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
   font-weight: bold;
 }
+
+.comment-box {
+  margin: 30px 100px 0 100px;
+}
+
+.comment-box .comment-title {
+  margin: 0 400px 10px 400px;
+}
+
+.comment-box .comment-title h3 {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, transparent), color-stop(30%, rgba(247, 198, 104, 0.2)), color-stop(65%, #f7c668), to(rgba(247, 198, 104, 0.2)));
+  background: linear-gradient(transparent 30%, rgba(247, 198, 104, 0.2) 30%, #f7c668 65%, rgba(247, 198, 104, 0.2));
+  font-weight: bold;
+}
+
+.comment-box .comment-form {
+  text-align: center;
+}
+
+.comment-box .comment-form .comment-btn {
+  margin-top: 10px;
+}
+
+.comment-box .comment-list .comment-area {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 3px #000000;
+}
+
+.comment-box .comment-list .comment-area .comment-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment-box .comment-list .comment-area .comment-user .user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.comment-box .comment-list .comment-area .comment-user .comment-nickname {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+}
+
+.comment-box .comment-list .comment-area .comment-user .comment-profession {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+}
+
+.comment-box .comment-list .comment-area .comment-content {
+  margin-top: 10px;
+}
+
+.comment-box .comment-list .comment-area .comment-time {
+  text-align: right;
+}
 /*# sourceMappingURL=show.css.map */
