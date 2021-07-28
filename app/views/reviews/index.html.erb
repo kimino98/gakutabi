@@ -56,6 +56,7 @@
           <div class="review-info">
             <i class="far fa-heart"></i>
             <i class="far fa-comment-dots"></i>
+            <%= review.comments.count%>
             <div class="post-time">
               <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前に投稿
             </div>

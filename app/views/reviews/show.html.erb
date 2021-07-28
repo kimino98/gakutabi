@@ -105,5 +105,53 @@
       </div>
     </div>
   </div>
+  <div class="comment-box">
+    <div class="comment-title">
+      <h3>コメント</h3>
+    </div>
+    <div class="comment-form">
+       <% if user_signed_in? %>
+        <%= form_with(model: [@review, @comment], local: true) do |f| %>
+          <%= f.text_area :content, class: "form-control", row: "3" %>
+          <div class= "comment-btn">
+            <%= f.submit "コメントする", class: "btn btn-outline-info" %>
+          </div>
+        <% end %>
+       <% else %>
+        <strong ><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+    </div>
+    <div class="comment-list">
+      <% @comments.each do |comment| %>
+        <div class="comment-area">
+          <div class="comment-user">
+            <%if comment.user.avatar.attached?%>
+              <%=link_to (image_tag comment.user.avatar, class: "user-img"), "#"%> 
+             <%else%>
+              <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+            <%end%>
+            <div class="comment-nickname">
+              <%= comment.user.nickname %>
+            </div>
+            <div class="comment-profession">
+              職業：<%= comment.user.profession.name %>
+            </div>
+          </div>
+          <div class="comment-content">
+            <%= comment.content %>
+          </div>
+          <%if current_user==comment.user%>
+            <div class="comment-trah">
+              <%= link_to(review_comment_path(@review, comment), method: :delete, data: { confirm: 'コメントを削除しますか'}) do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <%end%>
+          <div class="comment-time">
+            <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(comment.created_at) %>前
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
