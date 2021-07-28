@@ -91,3 +91,51 @@
     }
   }
 }
+
+.comment-box {
+  margin: 30px 100px 0 100px;
+  .comment-title {
+    margin: 0 400px 10px 400px;
+    h3 {
+      @include detail-title;
+    }
+  }
+  .comment-form {
+    text-align: center;
+    .comment-btn {
+      margin-top: 10px;
+    }
+  }
+
+  .comment-list {
+    .comment-area {
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      border: solid 3px #000000;
+      .comment-user {
+        display: flex;
+        .user-img {
+          width:  50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        .comment-nickname {
+          margin-top: auto ;
+          margin-bottom: auto;
+          margin-left: 15px;
+        }
+        .comment-profession {
+          margin-top: auto ;
+          margin-bottom: auto;
+          margin-left: 15px;
+        }
+      }
+      .comment-content {
+        margin-top: 10px;
+      }
+      .comment-time{
+        text-align: right;
+      }
+    }
+  }
+}
