@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @like = Like.new
   end
 
   def new

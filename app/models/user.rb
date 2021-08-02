@@ -15,6 +15,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :liked_users, through: :likes, source: :review
 
+  def liked_by?(review_id)
+    likes.where(review_id: review_id).exists?
+  end
+
   #バリデーション
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }

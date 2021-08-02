@@ -1,0 +1,11 @@
+<% if Like.find_by(user_id: current_user.id, review_id: @review.id) %>
+    <%=link_to  "reviews/#{@review.id}/likes/#{@review.likes.ids}", method: :delete, remote: true do %>
+      <i class="fas fa-heart"></i> 
+    <%end%>
+    <%= review.liked_users.count %>
+  <% else %>  
+    <%= link_to "/reviews/#{review.id}/likes" ,method: :post, remote:true do %>
+      <i class="far fa-heart"></i> 
+    <%end%>
+    <%= review.liked_users.count %>
+<% end %>
