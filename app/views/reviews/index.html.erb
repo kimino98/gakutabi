@@ -54,8 +54,8 @@
         <% end %>
         <div class="review-lower">
           <div class="review-info">
-            <div id="like-<%=review.id %>" class="m like_info">
-             <%= render "likes/like"%>
+            <div id="like-btn-<%=review.id %>">
+             <%= render "likes/like", review: review%>
             </div>
             <i class="far fa-comment-dots"></i>
             <%= review.comments.count%>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <% end %>
+    <% end %>
   </div>
 </div>
 

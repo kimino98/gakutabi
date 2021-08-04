@@ -1,11 +1,10 @@
-<% if Like.find_by(user_id: current_user.id, review_id: @review.id) %>
-    <%=link_to  "reviews/#{@review.id}/likes/#{@review.likes.ids}", method: :delete, remote: true do %>
+<% if review.liked_by?(current_user) %>
+    <%=link_to review_like_path(review, current_user), method: :delete, remote: true, id: :"like-button-#{review.id}" do %>
       <i class="fas fa-heart"></i> 
     <%end%>
-    <%= review.liked_users.count %>
+    <%= review.likes.count %>
   <% else %>  
-    <%= link_to "/reviews/#{review.id}/likes" ,method: :post, remote:true do %>
+    <%= link_to review_likes_path(review), method: :post, remote:true, id: :"like-button-#{review.id}" do %>
       <i class="far fa-heart"></i> 
     <%end%>
-    <%= review.liked_users.count %>
 <% end %>
