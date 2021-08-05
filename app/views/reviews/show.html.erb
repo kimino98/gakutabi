@@ -35,8 +35,13 @@
 
     <div class="review-lower">
       <div class="review-info">
-          <i class="far fa-heart"></i>
+        <div id="like-btn-<%=@review.id %>" class="like-info">
+          <%= render "likes/like", review: @review%>
+        </div>
+        <div class="review-comment">
           <i class="far fa-comment-dots"></i>
+            <%= @review.comments.count%>
+        </div>
         <div class="post-time">
           <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(@review.created_at) %>前に投稿
         </div>
