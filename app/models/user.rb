@@ -9,10 +9,13 @@ class User < ApplicationRecord
   
   #投稿写真
   has_one_attached :avatar
-
   #コメント機能
   has_many :conmments
+  #いいね機能
+  has_many :likes, dependent: :destroy
+  has_many :liked_reviews, through: :likes, source: :review
 
+  #バリデーション
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message:'は半角英数字を両方含む6文字にして下さい' }

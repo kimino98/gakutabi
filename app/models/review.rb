@@ -8,8 +8,16 @@ class Review < ApplicationRecord
 
   belongs_to :user
   has_many_attached :images
+  #コメント機能アソシエーション処理
   has_many :comments
+  #いいね機能アソシエーション処理
+  has_many :likes, dependent: :destroy
+  has_many :users, through: :likes
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 
+  #投稿バリデーション
   with_options presence: true do
     validates :faclity_name, length: { maximum: 40 }
     validates :images

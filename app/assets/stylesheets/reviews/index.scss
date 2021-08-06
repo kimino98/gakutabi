@@ -123,11 +123,20 @@
       .review-info {
         margin-right: 5px;
         font-size: 20px;
-        position: relative;
+        display: flex;
+
+        .like-info {
+          margin-right: 10px;
+        }
+        
+        .review-comment {
+          margin-right: 10px;
+         }
         
         .post-time {
-          float: right;
           font-size: medium;
+          margin-left: auto;
+          padding-top: 3px;
         }
       }
     }

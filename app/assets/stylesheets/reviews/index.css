@@ -122,11 +122,22 @@
 .review-contents .review-box .review-lower .review-info {
   margin-right: 5px;
   font-size: 20px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.review-contents .review-box .review-lower .review-info .like-info {
+  margin-right: 10px;
+}
+
+.review-contents .review-box .review-lower .review-info .review-comment {
+  margin-right: 10px;
 }
 
 .review-contents .review-box .review-lower .review-info .post-time {
-  float: right;
   font-size: medium;
+  margin-left: auto;
+  padding-top: 3px;
 }
 /*# sourceMappingURL=index.css.map */
