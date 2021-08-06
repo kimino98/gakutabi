@@ -1,0 +1,27 @@
+<div class="mypage-container">
+  <div class="mypage-content-entry">
+    <h1>〜<%= @user.nickname %>さんのページ〜</h1>
+  </div>
+  <div class="mypage-info">
+    <div class="mypage-icon">
+      <%if @user.avatar.attached?%>
+        <%=link_to (image_tag @user.avatar, class: "user-img"), "#"%>
+       <%else%>
+        <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+      <%end%>
+    </div>
+    <div class="mypage-detail">
+      <div class="mypage-company">
+        <%= @user.company_name %>
+      </div>
+      <div class="mypage-profession">
+        <%= @user.profession.name %>
+      </div>
+    </div>
+    <div class="mypage-Introduction">
+      ここに説明文
+    </div>
+  </div>
+</div>
+
+ 
