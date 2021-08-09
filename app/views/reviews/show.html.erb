@@ -146,7 +146,7 @@
             <%= comment.content %>
           </div>
           <%if current_user==comment.user%>
-            <div class="comment-trah">
+            <div class="comment-trash">
               <%= link_to(review_comment_path(@review, comment), method: :delete, data: { confirm: 'コメントを削除しますか'}) do %>
                 <i class="fas fa-trash-alt"></i>
               <% end %>

@@ -1,25 +1,43 @@
-<div class="mypage-container">
-  <div class="mypage-content-entry">
+<div class="my_page-container">
+  <div class="my_page-content-entry">
     <h1>〜<%= @user.nickname %>さんのページ〜</h1>
   </div>
-  <div class="mypage-info">
-    <div class="mypage-icon">
+  <div class="my_page-info">
+    <div class="my_page-icon">
       <%if @user.avatar.attached?%>
-        <%=link_to (image_tag @user.avatar, class: "user-img"), "#"%>
+        <%=link_to (image_tag @user.avatar, class: "my_page-img"), "#"%>
        <%else%>
-        <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+        <%=link_to (image_tag 'default-icon.png' , class: "my_page-img"), "#"%>
       <%end%>
     </div>
-    <div class="mypage-detail">
-      <div class="mypage-company">
+    <div class="my_page-detail">
+      <div class="my_page-company">
+        <p>所属先</p>
         <%= @user.company_name %>
       </div>
-      <div class="mypage-profession">
+      <div class="my_page-profession">
+        <p>職種</p>
         <%= @user.profession.name %>
       </div>
     </div>
-    <div class="mypage-Introduction">
-      ここに説明文
+    <div class="my_page-Introduction">
+      自己紹介
+    </div>
+  </div>
+  <div class="tab-area">
+    <div class="tab active">
+      タブ１
+    </div>
+    <div class="tab">
+      タブ２
+    </div>
+  </div>
+  <div class="content-area">
+    <div class="content show">
+      タブ１の中身です
+    </div>
+    <div class="content">
+      タブ２の中身です
     </div>
   </div>
 </div>
