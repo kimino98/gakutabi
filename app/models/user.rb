@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :reviews
   
   #投稿写真
   has_one_attached :avatar
