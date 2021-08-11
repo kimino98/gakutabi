@@ -33,47 +33,73 @@
     </div>
   </div>
   <div class="content-area">
-      <% @reviews.each do |review| %>
-    <div class="content show">
-        <%=link_to("/reviews/#{review.id}") do%>
-          <div class="my_page_review">
-            <div class="my_page-faclity_name">
-              <h3>施設名：<%= review.faclity_name %></h3>
-            </div>
-            <div class="my_page-img">
-              <%= image_tag review.images[0], class: "my_page-review"%>
+      <div class="content show">
+        <% @reviews.each do |review| %>
+          <%=link_to "/reviews/#{review.id}", class: "link-show" do%>
+          <div class="my_page-box">
+              <div class="my_page_review">
+                <div class="my_page-faclity_name">
+                  <h3>施設名：<%= review.faclity_name %></h3>
+                </div>
+                <div class="my_page-img-box">
+                  <%= image_tag review.images[0], class: "my_page-img"%>
+                </div>
+              </div>
+            <% end %>
+            <div class="my_page_review-info">
+              <div class="my_page-like">
+                <i class="fas fa-heart"></i>
+                <%= review.likes.count%>
+              </div>
+              <div class="my_page-comment">
+                <i class="far fa-comment-dots"></i>
+                <%= review.comments.count%>
+              </div>
+              <div class="post-time">
+                <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前に投稿
+              </div>
             </div>
           </div>
         <% end %>
-        <div class="my_page_review-info">
-          <div id="like-btn-<%=review.id %>" class="like-info">
-            <%= render "likes/like", review: review%>
-          </div>
-          <div class="review-comment">
-            <i class="far fa-comment-dots"></i>
-            <%= review.comments.count%>
-          </div>
-          <div class="post-time">
-            <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前に投稿
-          </div>
-        </div>
-    </div>
-      <% end %>
-      <% @likes.each do |like| %>
+      </div>
         <div class="content">
-          <%=link_to("/reviews/#{like.review.id}") do%>
-            <div class="my_page_review">
-             <div class="my_page-faclity_name">
-               <h3>施設名：<%= like.review.faclity_name %></h3>
-             </div>
-              <div class="my_page-img">
-               <%= image_tag like.review.images[0], class: "my_page-review"%>
-             </div>
-           </div>
+          <% @likes.each do |like| %>
+            <%=link_to "/reviews/#{like.review.id}", class: "link-show" do%>
+              <div class="my_page-box">
+                <div class="my_page_review">
+                  <div class="my_page-faclity_name">
+                    <h3>施設名：<%= like.review.faclity_name %></h3>
+                  </div>
+                  <div class="my_page-img-box">
+                    <%= image_tag like.review.images[0], class: "my_page-img"%>
+                  </div>
+                </div>
+            <% end %>
+                <div class="my_page_review-info">
+                  <div class="my_page-like">
+                    <i class="fas fa-heart"></i>
+                    <%= like.review.likes.count%>
+                  </div>
+                  <div class="my_page-comment">
+                    <i class="far fa-comment-dots"></i>
+                    <%= like.review.comments.count%>
+                  </div>
+                  <div class="post-time">
+                    <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(like.review.created_at) %>前に投稿
+                  </div>
+                </div>
+              </div>
           <% end %>
         </div>
-      <% end %>
   </div>
 </div>
 
- 
+       
+         
+        
+        
+         
+          
+          
+        
+   
