@@ -66,6 +66,14 @@
         
         .review-nickname {
           margin: auto 10px ;
+          .nickname {
+            text-decoration: none;
+            color:#212529;
+            &:hover {
+              box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	            transform: translateY(-4px);
+            }
+          }
         }
         
         .review-profession {
@@ -107,6 +115,10 @@
     }
     
     .review-image {
+      &:hover {
+        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+        transform: translateY(-4px);
+      }
       
       .review-img {
         width: 100%;

@@ -10,7 +10,7 @@
       </div>
       
       <div class="review-nickname">
-        <%= @review.user.nickname %>さんの投稿
+        <%= link_to @review.user.nickname, user_path(@review.user.id), class: "nickname" %>さんの投稿
       </div>
       <div class="review-profession">
         <p>職業：<%= @review.user.profession.name %></p>
