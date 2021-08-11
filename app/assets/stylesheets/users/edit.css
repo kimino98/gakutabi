@@ -1,0 +1,37 @@
+.edit-main {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.edit-main .edit-box {
+  margin-top: 50px;
+}
+
+.edit-main .edit-box .form-group {
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
+.edit-main .edit-box .form-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #212529;
+  font-weight: bold;
+  text-align: left;
+}
+
+.edit-main .edit-box .form-box {
+  text-align: left;
+}
+
+.edit-main .edit-box .form-box .input-default {
+  width: 500px;
+  height: 30%;
+}
+
+.edit-main .action {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+/*# sourceMappingURL=edit.css.map */
