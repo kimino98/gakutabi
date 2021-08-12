@@ -47,7 +47,16 @@
         <label >所属先名</label>
       </div>
       <div class="form-box">
-        <%= f.text_field :company_name, class:'form-control', id: 'formGroupExampleInput', placeholder:"例) 〇〇中学校 株式会社◯◯" %>
+        <%= f.text_field :company_name, class:'form-control', id: 'formGroupExampleInput', placeholder:"例) 〇〇中学校 株式会社◯◯", maxlength:"40" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-name">
+        <label >自己紹介</label>
+      </div>
+      <div class="form-box">
+        <%= f.text_field :profile, class:'form-control', id: 'formGroupExampleInput' %>
       </div>
     </div>
 
