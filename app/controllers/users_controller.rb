@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
+  before_action :ensure_correct_user, only: [:edit, :update]
 
   def show
     @reviews = @user.reviews.page(params[:page]).per(10).order('updated_at DESC')
@@ -25,5 +26,9 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :company_name, :profile, :profession_id, :avatar)
+    end
+
+    def ensure_correct_user
+      redirect_to user_path(@user) unless @user.id == current_user.id
     end
 end
