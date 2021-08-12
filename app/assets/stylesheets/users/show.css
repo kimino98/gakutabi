@@ -14,6 +14,10 @@
   width: 250px;
 }
 
+.my_page-container .my_page-info .edit-btn {
+  margin-top: 50px;
+}
+
 .my_page-container .my_page-info .my_page-detail {
   display: -webkit-box;
   display: -ms-flexbox;
