@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:destroy, :show, :edit, :update]
+  before_action :move_to_root, only: [:edit, :update, :destroy]
 
   def index
     @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -56,6 +57,10 @@ class ReviewsController < ApplicationController
 
   def set_review
     @review = Review.find(params[:id])
+  end
+
+  def move_to_root
+    redirect_to root_path unless @review.user.id == current_user.id
   end
 
 end

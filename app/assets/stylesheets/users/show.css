@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.my_page-container .my_page-content-entry {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.my_page-container .my_page-info {
+  text-align: center;
+}
+
+.my_page-container .my_page-info .my_page-icon .my_page-img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.my_page-container .my_page-info .edit-btn {
+  margin-top: 50px;
+}
+
+.my_page-container .my_page-info .my_page-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+.my_page-container .my_page-info .my_page-detail .my_page-company {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my_page-container .my_page-info .my_page-detail .my_page-profession {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my_page-container .tab-area {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #222e3e;
+  cursor: pointer;
+}
+
+.my_page-container .tab-area .tab {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  border-right: 1px solid #50637b;
+  border-left: 1px solid #222e3e;
+}
+
+.my_page-container .tab-area .tab.active {
+  background-color: #ccc;
+  color: #222e3e;
+  border: none;
+}
+
+.my_page-container .content-area {
+  text-align: center;
+}
+
+.my_page-container .content-area .content {
+  display: none;
+}
+
+.my_page-container .content-area .content.show {
+  margin-top: 50px;
+  display: block;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #222e3e;
+  background: white;
+  border-top: solid 5px #222e3e;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.my_page-container .content-area .content.show .link-show {
+  text-decoration: none;
+}
+
+.my_page-container .content-area .content.show .my_page-box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: dashed 2px #222e3e;
+  /*点線*/
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review .my_page-faclity_name {
+  margin: auto 0;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review .my_page-faclity_name h3 {
+  color: black;
+  margin-bottom: -8;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review .my_page-img-box {
+  height: 40%;
+  width: 30%;
+  margin-left: auto;
+  text-align: right;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review .my_page-img-box .my_page-img {
+  height: 40%;
+  width: 40%;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review-info {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review-info .my_page-like {
+  margin-right: 15px;
+}
+
+.my_page-container .content-area .content.show .my_page-box .my_page_review-info .post-time {
+  margin-left: auto;
+}
+/*# sourceMappingURL=show.css.map */

@@ -6,22 +6,88 @@
     border-radius: 50%;
   }
   
-  .introduction-img {
-    height: 70%;
-    width: 70%;
-    margin: 0 auto;
-    padding-top: 100px;
-  }
   
   .introduction {
     position: relative;
-    
-    p {
-      position: absolute;
-      color: white;
-      top: 0;
-      left: 0;
+    .introduction-img {
+      height: 70%;
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 100px;
     }
+    .box-string1 {
+      position: absolute;
+      top: 360px;
+      left: 360px;
+      background-color: rgba(0, 206, 209,.8);
+      border-radius: 10px;
+      p {
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.7;
+        span {
+          font-weight: 800;
+          border-bottom: solid 3px white;
+        }
+      }
+    }
+    .box-string2 {
+      position: absolute;
+      top: 360px;
+      left: 420px;
+      background-color: rgba(128, 128, 128,.8);
+      border-radius: 10px;
+      p {
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.7;
+      }
+    }
+    .box-string3 {
+      position: absolute;
+      top: 360px;
+      left: 430px;
+      background-color: rgba(30, 144, 255,.8);
+      border-radius: 10px;
+      p{
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.7;
+      }
+    }
+
+    .box-string4 {
+      position: absolute;
+      top: 360px;
+      left: 300px;
+      background-color: rgba(218, 165, 32,.8);
+      border-radius: 10px;
+      p{
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    top: 120px;
+    left: 250px;
+    color: white;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
   }
   
   
@@ -66,6 +132,14 @@
         
         .review-nickname {
           margin: auto 10px ;
+          .nickname {
+            text-decoration: none;
+            color:#212529;
+            &:hover {
+              box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	            transform: translateY(-4px);
+            }
+          }
         }
         
         .review-profession {
@@ -107,6 +181,10 @@
     }
     
     .review-image {
+      &:hover {
+        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+        transform: translateY(-4px);
+      }
       
       .review-img {
         width: 100%;
@@ -140,9 +218,6 @@
         }
       }
     }
-  }  
+  }
 }
-
-
-
 

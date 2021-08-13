@@ -1,0 +1,112 @@
+<div class="my_page-container">
+  <div class="my_page-content-entry">
+    <h1>〜<%= @user.nickname %>さんのページ〜</h1>
+  </div>
+  <div class="my_page-info">
+    <div class="my_page-icon">
+      <%if @user.avatar.attached?%>
+        <%=link_to (image_tag @user.avatar, class: "my_page-img"), "#"%>
+       <%else%>
+        <%=link_to (image_tag 'default-icon.png' , class: "my_page-img"), "#"%>
+      <%end%>
+    </div>
+    <div class="edit-btn">
+      <% if user_signed_in? && @user == current_user %>
+        <%= link_to "プロフィール編集", edit_user_path(current_user), class: "btn btn-success" %>
+      <% end %>
+    </div>
+    <div class="my_page-detail">
+      <div class="my_page-company">
+        <p>所属先</p>
+        <%= @user.company_name %>
+      </div>
+      <div class="my_page-profession">
+        <p>職種</p>
+        <%= @user.profession.name %>
+      </div>
+    </div>
+    <div class="my_page-Introduction">
+      <p>自己紹介</p>
+      <%= @user.profile %>
+    </div>
+  </div>
+  
+  <div class="tab-area">
+    <div class="tab active">
+      <p>投稿一覧</p>
+    </div>
+    <div class="tab">
+      <p>いいねした投稿</p>
+    </div>
+  </div>
+  <div class="content-area">
+      <div class="content show">
+        <% @reviews.each do |review| %>
+          <%=link_to "/reviews/#{review.id}", class: "link-show" do%>
+          <div class="my_page-box">
+              <div class="my_page_review">
+                <div class="my_page-faclity_name">
+                  <h3>施設名：<%= review.faclity_name %></h3>
+                </div>
+                <div class="my_page-img-box">
+                  <%= image_tag review.images[0], class: "my_page-img"%>
+                </div>
+              </div>
+            <% end %>
+            <div class="my_page_review-info">
+              <div class="my_page-like">
+                <i class="fas fa-heart"></i>
+                <%= review.likes.count%>
+              </div>
+              <div class="my_page-comment">
+                <i class="far fa-comment-dots"></i>
+                <%= review.comments.count%>
+              </div>
+              <div class="post-time">
+                <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前に投稿
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+        <div class="content">
+          <% @likes.each do |like| %>
+            <%=link_to "/reviews/#{like.review.id}", class: "link-show" do%>
+              <div class="my_page-box">
+                <div class="my_page_review">
+                  <div class="my_page-faclity_name">
+                    <h3>施設名：<%= like.review.faclity_name %></h3>
+                  </div>
+                  <div class="my_page-img-box">
+                    <%= image_tag like.review.images[0], class: "my_page-img"%>
+                  </div>
+                </div>
+            <% end %>
+                <div class="my_page_review-info">
+                  <div class="my_page-like">
+                    <i class="fas fa-heart"></i>
+                    <%= like.review.likes.count%>
+                  </div>
+                  <div class="my_page-comment">
+                    <i class="far fa-comment-dots"></i>
+                    <%= like.review.comments.count%>
+                  </div>
+                  <div class="post-time">
+                    <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(like.review.created_at) %>前に投稿
+                  </div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+  </div>
+</div>
+
+       
+         
+        
+        
+         
+          
+          
+        
+   

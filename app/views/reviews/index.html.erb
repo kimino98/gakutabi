@@ -1,9 +1,50 @@
 <div class="main">
   <div class="slider-box">
-    <div class="introduction"><img class="introduction-img" src="assets/photo1.jpg"></div>
-    <div class="introduction"><img class="introduction-img" src="assets/photo2.jpg"></div>
-    <div class="introduction"><img class="introduction-img" src="assets/photo3.jpg"></div>
-    <div class="introduction"><img class="introduction-img" src="assets/photo4.jpg"></div>
+    <div class="introduction">
+      <img class="introduction-img" src="assets/photo1.jpg">
+      <div class="box-string1">
+        <p>教育旅行に特化したサイトです。<br>
+           他学校はどのような地域で行事をしているのだろう<br>
+           どんな学習をしているのだろう<br>
+           そんな思いをこの<span>GAKUTABI</span>で解決できます。<br>
+           それぞれの視点から感じたものを投稿し、より良い学校行事を生徒達に届けましょう。<br>
+        </p>
+      </div>
+      <h1>一生の思い出を。忘れられない旅を。<h1>
+    </div>
+    <div class="introduction">
+      <img class="introduction-img" src="assets/photo2.jpg">
+      <div class="box-string2">
+        <p>教員の皆様へ<br>
+          時間がかかってしまう候補地探しをこのサイトで完結することができます。<br>
+          先生しか分からない事などお互いに投稿し、<br>
+          より学習効果のある地域や施設を見つけて<br>
+          楽しい行事を成功させましょう。<br>
+        </p>
+      </div>
+      <h1>もっと楽に。もっと手軽に。<h1>
+    </div>
+    <div class="introduction">
+      <img class="introduction-img" src="assets/photo3.jpg">
+      <div class="box-string3">
+        <p>旅行会社の皆様へ<br>
+           旅行のプロとして。案内人のプロとして。<br>
+           プロからの目線で見た観光地を伝えてみませんか。<br>
+           また先生の投稿を見る事でより良い企画に繋がるかもしれません。<br>
+        </p>
+      </div>
+      <h1>プロとしてのこだわりと挑戦。<h1>
+    </div>
+    <div class="introduction">
+      <img class="introduction-img" src="assets/pthoto4.jpg">
+      <div class="box-string4">
+        <p>観光地施設の皆様へ<br>
+           施設の良さを伝える場所となります<br>
+           様々な投稿で見たものを自分の施設に活かして学習効果を高める場所になること間違いなしです。<br>
+        </p>
+      </div>
+      <h1>おもてなし文化を次の世代へ・・・<h1>
+    </div>
   </div>
 
   
@@ -20,7 +61,7 @@
           </div>
 
           <div class="review-nickname">
-            <%= review.user.nickname %>
+            <%= link_to review.user.nickname, user_path(review.user.id), class: "nickname" %>
           </div>
 
           <div class="review-profession">
