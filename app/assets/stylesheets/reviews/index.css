@@ -89,7 +89,7 @@
   line-height: 1.7;
 }
 
-h1 {
+.introduction h1 {
   position: absolute;
   top: 120px;
   left: 250px;
