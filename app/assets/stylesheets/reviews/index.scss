@@ -80,15 +80,43 @@
         line-height: 1.7;
       }
     }
+    h1 {
+      position: absolute;
+      top: 120px;
+      left: 250px;
+      color: white;
+      font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
   }
 
-  h1 {
-    position: absolute;
-    top: 120px;
-    left: 250px;
-    color: white;
-    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  .search-box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #222e3e;
+    margin: 100px 50px 0 50px;
+    .search-keyword {
+      margin: 10px 150px 30px 150px ;
+    }
+    .search-upper {
+      display: flex;
+      .search-form {
+        margin: auto;
+      }
+    }
+    .search-row {
+      margin-top: 20px;
+      display: flex;
+      .search-form {
+        margin: auto;
+      }
+    }
+    .search-submit {
+      margin-top: 30px;
+      text-align: center;
+      color: white;
+    }
   }
+
   
   
   

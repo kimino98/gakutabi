@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_review, only: [:destroy, :show, :edit, :update]
   before_action :move_to_root, only: [:edit, :update, :destroy]
+  before_action :set_review_search, only: [:index, :search]
 
   def index
     @reviews = Review.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -50,9 +52,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def search
+    @results = @q.result(distinct: true)
+  end
+
   private
   def review_params
-    params.require(:review).permit(:faclity_name, :hotel_type_id, :grade_id, :season_id, :region_id, :student_count_id, :price, :text, :safety, images: []).merge(user_id: current_user.id)
+    params.require(:review).permit(:faclity_name, :event_id, :hotel_type_id, :grade_id, :season_id, :region_id, :student_count_id, :price, :text, :safety, images: []).merge(user_id: current_user.id)
   end
 
   def set_review
@@ -61,6 +67,10 @@ class ReviewsController < ApplicationController
 
   def move_to_root
     redirect_to root_path unless @review.user.id == current_user.id
+  end
+
+  def set_review_search
+    @q = Review.ransack(params[:q])
   end
 
 end

@@ -89,12 +89,50 @@
   line-height: 1.7;
 }
 
-h1 {
+.introduction h1 {
   position: absolute;
   top: 120px;
   left: 250px;
   color: white;
   font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
+.search-box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #222e3e;
+  margin: 100px 50px 0 50px;
+}
+
+.search-box .search-keyword {
+  margin: 10px 150px 30px 150px;
+}
+
+.search-box .search-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box .search-upper .search-form {
+  margin: auto;
+}
+
+.search-box .search-row {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box .search-row .search-form {
+  margin: auto;
+}
+
+.search-box .search-submit {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
 }
 
 .review-img {

@@ -4,13 +4,13 @@
       <img class="introduction-img" src="assets/photo1.jpg">
       <div class="box-string1">
         <p>教育旅行に特化したサイトです。<br>
-           他学校はどのような地域で行事をしているのだろう<br>
+           他学校はどのような地域で行事をしているのだろう。<br>
            どんな学習をしているのだろう<br>
            そんな思いをこの<span>GAKUTABI</span>で解決できます。<br>
            それぞれの視点から感じたものを投稿し、より良い学校行事を生徒達に届けましょう。<br>
         </p>
       </div>
-      <h1>一生の思い出を。忘れられない旅を。<h1>
+        <h1>一生の思い出を。忘れられない旅を。<h1>
     </div>
     <div class="introduction">
       <img class="introduction-img" src="assets/photo2.jpg">
@@ -45,6 +45,45 @@
       </div>
       <h1>おもてなし文化を次の世代へ・・・<h1>
     </div>
+  </div>
+
+  <div class="search-box">
+    <%= search_form_for @q, url: search_reviews_path do |f| %>
+    <div class="search-keyword">
+      <%= f.search_field :faclity_name_cont, class:"form-control", placeholder: "施設を探す" %>
+    </div>
+      <div class="search-upper">
+        <div class="search-form">
+          <label>行事：</label>
+          <%= f.collection_select :event_id_eq, Event.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+        </div>
+        <div class="search-form">
+          <label>ホテルタイプ：</label>
+          <%= f.collection_select :hotel_type_id_eq, HotelType.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
+        </div>
+        <div class="search-form">
+          <label>学年：</label>
+          <%= f.collection_select :grade_id_eq, Grade.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
+        </div>
+      </div>
+      <div class="search-row">
+        <div class="search-form">
+          <label>季節：</label>
+          <%= f.collection_select :season_id_eq, Season.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+        </div>
+        <div class="search-form">
+          <label>都道府県：</label>
+          <%= f.collection_select :region_id_eq, Region.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+        </div>
+        <div class="search-form">
+          <label>生徒人数：</label>
+          <%= f.collection_select :student_count_id_eq, StudentCount.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+        </div>
+      </div>
+      <div class="search-submit">
+        <%= f.submit "検索", class:"btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
 
   
@@ -84,9 +123,6 @@
           <div class="review-faclity_name">
             <p>施設名：<%= review.faclity_name %><p>
           </div>
-        </div>
-        <div class="tag_name">
-          タグ:
         </div>
         <%=link_to(review_path(review)) do%>
           <div class="review-image">
