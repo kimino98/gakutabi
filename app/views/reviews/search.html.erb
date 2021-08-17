@@ -1,4 +1,3 @@
-検索結果
 <% if @results.length !=0 %>
   <div class="review-contents">
     <% @results.each do |review| %>
@@ -58,5 +57,7 @@
     <% end %>
   </div>
  <% else %>
-  該当の投稿がありません
+  <div class="alert alert-warning" role="alert">
+  <h3>該当の投稿がありません</h3>
+  </div>
 <% end %>
