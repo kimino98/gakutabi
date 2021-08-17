@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_review, only: [:destroy, :show, :edit, :update]
   before_action :move_to_root, only: [:edit, :update, :destroy]
   before_action :set_review_search, only: [:index, :search]
