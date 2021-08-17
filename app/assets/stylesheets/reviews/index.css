@@ -97,6 +97,43 @@
   font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
 }
 
+.search-box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #222e3e;
+  margin: 100px 50px 0 50px;
+}
+
+.search-box .search-keyword {
+  margin: 10px 150px 30px 150px;
+}
+
+.search-box .search-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box .search-upper .search-form {
+  margin: auto;
+}
+
+.search-box .search-row {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-box .search-row .search-form {
+  margin: auto;
+}
+
+.search-box .search-submit {
+  text-align: center;
+  color: white;
+}
+
 .review-img {
   height: 30%;
   width: 30%;

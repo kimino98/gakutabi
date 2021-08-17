@@ -89,6 +89,33 @@
     }
   }
 
+  .search-box {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #222e3e;
+    margin: 100px 50px 0 50px;
+    .search-keyword {
+      margin: 10px 150px 30px 150px ;
+    }
+    .search-upper {
+      display: flex;
+      .search-form {
+        margin: auto;
+      }
+    }
+    .search-row {
+      margin-top: 10px;
+      display: flex;
+      .search-form {
+        margin: auto;
+      }
+    }
+    .search-submit {
+      text-align: center;
+      color: white;
+    }
+  }
+
   
   
   
