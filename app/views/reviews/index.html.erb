@@ -124,9 +124,6 @@
             <p>施設名：<%= review.faclity_name %><p>
           </div>
         </div>
-        <div class="tag_name">
-          タグ:
-        </div>
         <%=link_to(review_path(review)) do%>
           <div class="review-image">
             <%= image_tag review.images[0], class: "review-img"%>
