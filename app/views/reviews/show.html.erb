@@ -78,6 +78,10 @@
         <h3>詳細</h3>
       </div>
       <div class="review-detail">
+        <div class="event-info">
+          <p>行事</p>
+          <%= @review.event.name%>
+        </div>
         <div class="hotel_type-info">
           <p>ホテルタイプ</p>
           <% if @review.hotel_type_id == 2 %>
@@ -86,7 +90,6 @@
             <%= @review.hotel_type.name %>
           <% end %>
         </div>
-
         <div class="grade-info">
           <p>学年</p>
           <%= @review.grade.name%>

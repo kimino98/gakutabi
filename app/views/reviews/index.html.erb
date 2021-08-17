@@ -54,6 +54,10 @@
     </div>
       <div class="search-upper">
         <div class="search-form">
+          <label>行事：</label>
+          <%= f.collection_select :event_id_eq, Event.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+        </div>
+        <div class="search-form">
           <label>ホテルタイプ：</label>
           <%= f.collection_select :hotel_type_id_eq, HotelType.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
         </div>
@@ -61,12 +65,12 @@
           <label>学年：</label>
           <%= f.collection_select :grade_id_eq, Grade.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
         </div>
+      </div>
+      <div class="search-row">
         <div class="search-form">
           <label>季節：</label>
           <%= f.collection_select :season_id_eq, Season.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
         </div>
-      </div>
-      <div class="search-row">
         <div class="search-form">
           <label>都道府県：</label>
           <%= f.collection_select :region_id_eq, Region.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>

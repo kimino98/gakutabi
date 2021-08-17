@@ -11,6 +11,11 @@
         <%= f.label :faclity_name, "施設名" %><br />
         <%= f.text_field :faclity_name, class: "form-control", placeholder: "丸の内ホテル・東京遊園地", maxlength:"40" %>
       </div>
+
+      <div class="form-group">
+        <%= f.label :event_id, "学校行事" %><br />
+        <%= f.collection_select(:event_id, Event.all, :id, :name, {}, {class:""}) %>
+      </div>
       
       <div class="form-group">
         <%= f.label :hotel_type_id, "ホテルタイプ" %><br />

@@ -5,6 +5,7 @@ class Review < ApplicationRecord
   belongs_to :season
   belongs_to :region
   belongs_to :student_count
+  belongs_to :event
 
   belongs_to :user
   has_many_attached :images
@@ -35,6 +36,7 @@ class Review < ApplicationRecord
       validates :season_id
       validates :region_id
       validates :student_count_id
+      validates :event_id
     end
   end
   
