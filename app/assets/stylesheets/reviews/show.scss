@@ -50,12 +50,20 @@
     display: flex;
     justify-content: space-around;
 
+    .event-info {
+      text-align: center;
+      p {
+        @include detail-info;
+      }
+    }
+
     .hotel_type-info {
       text-align: center;
       p {
         @include detail-info;
       }
     }
+
 
     .grade-info {
       text-align: center;

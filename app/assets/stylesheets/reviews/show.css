@@ -55,6 +55,17 @@
       justify-content: space-around;
 }
 
+.review-detail-box .review-detail .event-info {
+  text-align: center;
+}
+
+.review-detail-box .review-detail .event-info p {
+  text-align: center;
+  -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+          box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
+  font-weight: bold;
+}
+
 .review-detail-box .review-detail .hotel_type-info {
   text-align: center;
 }
