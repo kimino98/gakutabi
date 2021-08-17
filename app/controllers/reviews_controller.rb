@@ -52,6 +52,7 @@ class ReviewsController < ApplicationController
   end
 
   def search
+    @results = @q.result(distinct: true)
   end
 
   private
@@ -69,7 +70,6 @@ class ReviewsController < ApplicationController
 
   def set_review_search
     @q = Review.ransack(params[:q])
-    @reviews = @q.result(distinct: true)
   end
 
 end
