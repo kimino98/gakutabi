@@ -1,0 +1,62 @@
+検索結果
+<% if @results.length !=0 %>
+  <div class="review-contents">
+    <% @results.each do |review| %>
+      <div class="review-box">
+        <div class="review-upper-row">
+          <div class="review_user__img">
+            <%if review.user.avatar.attached?%>
+              <%=link_to (image_tag review.user.avatar, class: "user-img"), "#"%>
+            <%else%>
+              <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+            <%end%>
+          </div>
+          <div class="review-nickname">
+            <%= link_to review.user.nickname, user_path(review.user.id), class: "nickname" %>
+          </div>
+          <div class="review-profession">
+            <p>職業：<%= review.user.profession.name %></p>
+          </div>
+          <%if user_signed_in? && current_user.id==review.user.id%>
+            <div class="review-gear">
+              <%= link_to(edit_review_path(review.id)) do %>
+                <i class="fas fa-cog" id="lists"></i>
+              <%end%>
+              <%= link_to(review_path(review.id), method: :delete, data: { confirm: '本当に削除しますか'} ) do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="review-title">
+          <div class="review-faclity_name">
+            <p>施設名：<%= review.faclity_name %><p>
+          </div>
+        </div>
+
+        <%=link_to(review_path(review)) do%>
+          <div class="review-image">
+            <%= image_tag review.images[0], class: "review-img"%>
+          </div>
+        <% end %>
+        <div class="review-lower">
+          <div class="review-info">
+            <div id="like-btn-<%=review.id %>" class="like-info">
+             <%= render "likes/like", review: review%>
+            </div>
+            <div class="review-comment">
+              <i class="far fa-comment-dots"></i>
+              <%= review.comments.count%>
+            </div>
+            <div class="post-time">
+              <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(review.created_at) %>前に投稿
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+ <% else %>
+  該当の投稿がありません
+<% end %>
