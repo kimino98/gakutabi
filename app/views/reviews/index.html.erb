@@ -47,6 +47,22 @@
     </div>
   </div>
 
+  <div class="search-box">
+    <%= search_form_for @q, url: search_reviews_path do |f| %>
+      ホテルタイプ：
+      <%= f.collection_select :hotel_type_id_eq, HotelType.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
+      学年：
+      <%= f.collection_select :grade_id_eq, Grade.where.not(id: 0), :id, :name, include_blank: "--", class:"search-select-box" %>
+      季節
+      <%= f.collection_select :season_id_eq, Season.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+      都道府県
+      <%= f.collection_select :region_id_eq, Region.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+      生徒人数
+      <%= f.collection_select :student_count_id_eq, StudentCount.where.not(id: 0), :id, :name, include_blank: "--",  class:"search-select-box" %>
+      <%= f.submit "検索"%>
+    <% end %>
+  </div>
+
   
   <div class="review-contents">
     <% @reviews.each do |review| %>
