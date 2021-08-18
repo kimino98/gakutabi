@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .new-user-main {
   margin-top: 50px;
   margin-left: 50px;
@@ -28,5 +29,21 @@
 .new-user-main .new-user-box .form-box .input-default {
   width: 500px;
   height: 30%;
+}
+
+.new-user-main .action {
+  margin-top: 40px;
+}
+
+.new-user-main .new-user-login {
+  margin-top: 50px;
+}
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .new-user-main .new-user-box .form-group {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
 }
 /*# sourceMappingURL=new.css.map */

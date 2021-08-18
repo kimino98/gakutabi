@@ -74,10 +74,9 @@
     <div class="action">
       <%= f.submit "新規登録", class:"btn btn-info"%>
     </div>
+    <div class="new-user-login">
+      <label>アカウントお持ちのからはこちら</label>
+      <%= render "devise/shared/links" %>
+    </div> 
   </div>
 <% end %>
-
-<div class="new-user">
-  <label>アカウントお持ちのからはこちら</label>
-  <%= render "devise/shared/links" %>
-</div> 
