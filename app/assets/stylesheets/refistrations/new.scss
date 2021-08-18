@@ -42,3 +42,15 @@
     }
   }
 }
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .new-user-main {
+    .new-user-box {
+      .form-group {
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+    }
+  }
+}
