@@ -28,3 +28,27 @@
     margin-bottom: 100px;
   }
 }
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .edit-main {
+    .edit-box {
+      .form-group {
+        margin-right: 50px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .edit-main {
+    .edit-box {
+      .form-group {
+        margin-right: 10px;
+        margin-left: 100px;
+      }
+    }
+  }
+}
