@@ -1,0 +1,29 @@
+.login-main {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  .login-box {
+    margin-top: 50px;
+    .form-group {
+      margin-right: 300px;
+      margin-left: 300px;
+    }
+    .form-name {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #212529;
+      font-weight: bold;
+      text-align: left;
+    }
+    .form-box {
+      text-align: left;
+      .input-default {
+        width: 500px;
+        height: 30%;
+      }
+    }
+  }
+  .action {
+    margin-top: 20px;
+  }
+}
