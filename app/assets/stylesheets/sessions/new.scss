@@ -27,3 +27,15 @@
     margin-top: 20px;
   }
 }
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .login-main {
+    .login-box {
+      .form-group {
+        margin-right: 50px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
