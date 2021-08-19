@@ -1,4 +1,11 @@
   $index-color:#364e96;
+  @mixin image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
   .default-icon {
     width: 50px;
@@ -12,18 +19,16 @@
     .introduction-img {
       height: 70%;
       width: 70%;
-      margin: 0 auto;
-      padding-top: 100px;
+      margin: 50px auto;
     }
     .box-string1 {
       position: absolute;
-      top: 360px;
-      left: 360px;
+      @include image;
       background-color: rgba(0, 206, 209,.8);
       border-radius: 10px;
       p {
         color: white;
-        font-size: large;
+        font-size: 26px;
         text-align: center;
         padding-left: 20px;
         padding-right: 20px;
@@ -36,13 +41,12 @@
     }
     .box-string2 {
       position: absolute;
-      top: 360px;
-      left: 420px;
+      @include image;
       background-color: rgba(128, 128, 128,.8);
       border-radius: 10px;
       p {
         color: white;
-        font-size: large;
+        font-size: 26px;
         text-align: center;
         padding-left: 20px;
         padding-right: 20px;
@@ -51,13 +55,12 @@
     }
     .box-string3 {
       position: absolute;
-      top: 360px;
-      left: 430px;
+      @include image;
       background-color: rgba(30, 144, 255,.8);
       border-radius: 10px;
       p{
         color: white;
-        font-size: large;
+        font-size: 26px;
         text-align: center;
         padding-left: 20px;
         padding-right: 20px;
@@ -67,13 +70,12 @@
 
     .box-string4 {
       position: absolute;
-      top: 360px;
-      left: 300px;
+      @include image;
       background-color: rgba(218, 165, 32,.8);
       border-radius: 10px;
       p{
         color: white;
-        font-size: large;
+        font-size: 26px;
         text-align: center;
         padding-left: 20px;
         padding-right: 20px;
@@ -82,8 +84,9 @@
     }
     h1 {
       position: absolute;
-      top: 120px;
-      left: 250px;
+      top: 40px;
+      left: 60px;
+      transform: translate(25%, 70%);
       color: white;
       font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
     }
@@ -100,14 +103,21 @@
     .search-upper {
       display: flex;
       .search-form {
-        margin: auto;
+        margin-left: 120px;
+        
+        select {
+          width: 200px;
+        }
       }
     }
     .search-row {
       margin-top: 20px;
       display: flex;
       .search-form {
-        margin: auto;
+        margin-left: 120px;
+        select {
+          width: 200px;
+        }
       }
     }
     .search-submit {
@@ -246,6 +256,84 @@
         }
       }
     }
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .introduction {
+    .box-string1 {
+      p {
+        font-size: 5px;
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .box-string2 {
+      p {
+        font-size: 13px;
+      }
+    }
+    .box-string3 {
+      p{
+        font-size: 13px;
+      }
+    }
+
+    .box-string4 {
+      
+      p{
+        font-size: 13px;
+      }
+    }
+    h1 {
+      top: 20px;
+      left: 20px;
+      font-size: 27px;
+    }
+  }
+  .search-box {
+    .search-keyword {
+      margin: 10px 30px 10px 30px ;
+    }
+    .search-upper {
+      .search-form {
+        width: 150px;
+        margin-left: 30px;
+        select {
+          width: 100px;
+        }
+      }
+    }
+    .search-row {
+      margin-top: 20px;
+      .search-form {
+        width: 150px;
+        margin-left: 30px;
+        select {
+          width: 100px;
+        }
+      }
+    }
+    .search-submit {
+      margin-top: 30px;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+
+.review-img {
+  height: 30%;
+  width: 30%;
+}
+.review-contents {
+  margin: 30px 30px;
+  .review-box {
+    width: 80%;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
