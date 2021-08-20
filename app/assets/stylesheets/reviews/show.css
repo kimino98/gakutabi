@@ -9,7 +9,7 @@
 }
 
 .review-impression-box .review-impression .impression-title {
-  margin: 0 350px 0 350px;
+  margin: 0 auto;
 }
 
 .review-impression-box .review-impression .impression-title h3 {
@@ -25,7 +25,7 @@
 }
 
 .review-impression-box .review-corona .corona-title {
-  margin: 10px 300px 0 300px;
+  margin: 10px auto;
 }
 
 .review-impression-box .review-corona .corona-title h3 {
@@ -37,7 +37,7 @@
 }
 
 .review-detail-box .detail-title {
-  margin: 10px 350px 20px 350px;
+  margin: 10px auto;
 }
 
 .review-detail-box .detail-title h3 {
@@ -137,11 +137,7 @@
 }
 
 .comment-box {
-  margin: 30px 100px 0 100px;
-}
-
-.comment-box .comment-title {
-  margin: 0 400px 10px 400px;
+  margin: 5% 10% 0 10%;
 }
 
 .comment-box .comment-title h3 {
@@ -153,6 +149,7 @@
 
 .comment-box .comment-form {
   text-align: center;
+  margin: 10px auto;
 }
 
 .comment-box .comment-form .comment-btn {
@@ -205,13 +202,13 @@
   text-align: right;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 560px) {
   .review-impression-box .review-impression {
     margin-top: 30px;
     margin-bottom: 20px;
   }
   .review-impression-box .review-impression .impression-title {
-    margin: 0 100px 0 100px;
+    margin: 0 50px 0 50px;
   }
   .review-impression-box .review-impression .impression-title h3 {
     margin-bottom: 20px;
@@ -316,12 +313,6 @@
     -webkit-box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
             box-shadow: 0px -6px 5px -3px rgba(247, 198, 104, 0.8) inset, 0px 7px 5px -8px #f7c668;
     font-weight: bold;
-  }
-  .comment-box {
-    margin: 30px 0 0 0;
-  }
-  .comment-box .comment-title {
-    margin: 0 100px 10px 100px;
   }
 }
 /*# sourceMappingURL=show.css.map */
