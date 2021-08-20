@@ -23,10 +23,6 @@
       </div>
     </div>
 
-    <div class="tag_name">
-      タグ:
-    </div>
-
     <div class="slider-box">
       <% @review.images.each do |image| %>
         <%=image_tag image ,class: "slider-img"%>
@@ -78,37 +74,41 @@
         <h3>詳細</h3>
       </div>
       <div class="review-detail">
-        <div class="event-info">
-          <p>行事</p>
-          <%= @review.event.name%>
+        <div class="review-detail-upper">
+          <div class="event-info">
+            <p>行事</p>
+            <%= @review.event.name%>
+          </div>
+          <div class="hotel_type-info">
+            <p>ホテルタイプ</p>
+            <% if @review.hotel_type_id == 2 %>
+              -
+            <%else%>
+              <%= @review.hotel_type.name %>
+            <% end %>
+          </div>
+          <div class="grade-info">
+            <p>学年</p>
+            <%= @review.grade.name%>
+          </div>
         </div>
-        <div class="hotel_type-info">
-          <p>ホテルタイプ</p>
-          <% if @review.hotel_type_id == 2 %>
-            -
-          <%else%>
-            <%= @review.hotel_type.name %>
-          <% end %>
-        </div>
-        <div class="grade-info">
-          <p>学年</p>
-          <%= @review.grade.name%>
-        </div>
-        <div class="season-info">
-          <p>利用した時期</p>
-          <%= @review.season.name%>
-        </div>
-        <div class="region-info">
-          <p>施設所在地</p>
-          <%= @review.region.name%>
-        </div>
-        <div class="student_count-info">
-          <p>参加生徒</p>
-          <%=@review.student_count.name%>
-        </div>
-        <div class="price-info">
-          <p>料金</p>
-          <%= @review.price%>円
+        <div class="review-detail-row">
+          <div class="season-info">
+            <p>利用した時期</p>
+            <%= @review.season.name%>
+          </div>
+          <div class="region-info">
+            <p>施設所在地</p>
+            <%= @review.region.name%>
+          </div>
+          <div class="student_count-info">
+            <p>参加生徒</p>
+            <%=@review.student_count.name%>
+          </div>
+          <div class="price-info">
+            <p>料金</p>
+            <%= @review.price%>円
+          </div>
         </div>
       </div>
     </div>

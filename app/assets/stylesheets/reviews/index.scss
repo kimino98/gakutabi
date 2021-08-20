@@ -26,46 +26,18 @@
       @include image;
       background-color: rgba(0, 206, 209,.8);
       border-radius: 10px;
-      p {
-        color: white;
-        font-size: 26px;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-        span {
-          font-weight: 800;
-          border-bottom: solid 3px white;
-        }
-      }
     }
     .box-string2 {
       position: absolute;
       @include image;
       background-color: rgba(128, 128, 128,.8);
       border-radius: 10px;
-      p {
-        color: white;
-        font-size: 26px;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
     }
     .box-string3 {
       position: absolute;
       @include image;
       background-color: rgba(30, 144, 255,.8);
       border-radius: 10px;
-      p{
-        color: white;
-        font-size: 26px;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
     }
 
     .box-string4 {
@@ -73,14 +45,6 @@
       @include image;
       background-color: rgba(218, 165, 32,.8);
       border-radius: 10px;
-      p{
-        color: white;
-        font-size: 26px;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
     }
     h1 {
       position: absolute;
@@ -260,59 +224,40 @@
 }
 
 /* スマホ表示時 */
-@media (max-width: 599px) {
+@media screen and(max-width: 480px) {
   .introduction {
-    .box-string1 {
-      p {
-        font-size: 5px;
-        span {
-          font-weight: 700;
-        }
-      }
-    }
-    .box-string2 {
-      p {
-        font-size: 13px;
-      }
-    }
-    .box-string3 {
-      p{
-        font-size: 13px;
-      }
-    }
-
-    .box-string4 {
-      
-      p{
-        font-size: 13px;
-      }
-    }
     h1 {
-      top: 20px;
-      left: 20px;
-      font-size: 27px;
+      top: 40px;
+      left: 10px;
+      font-size: 18px;
     }
   }
   .search-box {
     .search-keyword {
-      margin: 10px 30px 10px 30px ;
+      margin: 10px ;
     }
     .search-upper {
       .search-form {
-        width: 150px;
-        margin-left: 30px;
+        width: 100px;
+        margin-left: 10px;
+        label {
+          font-size: 13px
+        }
         select {
-          width: 100px;
+          width: 90px;
         }
       }
     }
     .search-row {
       margin-top: 20px;
       .search-form {
-        width: 150px;
-        margin-left: 30px;
+        width: 100px;
+        margin-left: 10px;
+        label {
+          font-size: 13px
+        }
         select {
-          width: 100px;
+          width: 90px;
         }
       }
     }
@@ -322,18 +267,17 @@
       color: white;
     }
   }
-}
-
-.review-img {
-  height: 30%;
-  width: 30%;
-}
-.review-contents {
-  margin: 30px 30px;
-  .review-box {
-    width: 80%;
-    margin-left: 50px;
-    margin-right: 50px;
+  .review-img {
+    height: 30%;
+    width: 30%;
+  }
+  .review-contents {
+    margin: 10px 10px;
+    .review-box {
+      width: 100%;
+    }
   }
 }
+
+
 
