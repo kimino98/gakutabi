@@ -9,12 +9,12 @@
         <%end%>
       </div>
       
-      <div class="review-nickname">
-        <%= link_to @review.user.nickname, user_path(@review.user.id), class: "nickname" %>さんの投稿
-      </div>
-      <div class="review-profession">
-        <p>職業：<%= @review.user.profession.name %></p>
-      </div>
+       <div class="review-nickname">
+            <p><%= link_to @review.user.nickname, user_path(@review.user.id), class: "nickname" %>さんの投稿</p>
+          </div>
+          <div class="review-profession">
+            <p>職業：<%= @review.user.profession.name %></p>
+          </div>
     </div>
 
     <div class="review-title">

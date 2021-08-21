@@ -26,18 +26,20 @@
 
   .search-box {
     padding: 0.5em 1em;
-    margin: 2em 0;
     border: double 5px #222e3e;
-    margin: 100px 50px 0 50px;
+    margin: 10%;
     .search-keyword {
-      margin: 10px 150px 30px 150px ;
+      margin: 30px 150px;
     }
     .search-upper {
       display: flex;
-      
       .search-form {
         margin-left: auto;
         margin-right: auto;
+        width: 20%;
+        label{
+          margin-bottom: 5px;
+        }
         select {
           width: 100%;
         }
@@ -49,6 +51,10 @@
       .search-form {
         margin-left: auto;
         margin-right: auto;
+        width: 20%;
+        label{
+          margin-bottom: 5px;
+        }
         select {
           width: 100%;
         }
@@ -62,11 +68,10 @@
   }
 
   .review-contents {
-    margin-top: 50px;
     
     .review-box {
       padding: 0.5em 1em;
-      width: 70%;
+      width: 60%;
       margin-left: auto;
       margin-right: auto;
       
@@ -78,8 +83,7 @@
         border: solid 3px $index-color;
         padding: 0.5em;
         border-radius: 0.5em;
-        font-weight: 800;
-          
+        font-weight: 800; 
         .review_user__img {
           width: 50px;
           height: 50px;
@@ -92,38 +96,30 @@
             object-fit: cover;
           }
         }
-
         .review-nickname {
-          margin: auto 10px ;
-          .nickname {
-            text-decoration: none;
-            color:#212529;
-            &:hover {
-              box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-	            transform: translateY(-4px);
+          margin: 12px 10px ;
+          p {
+            .nickname {
+              text-decoration: none;
+              color:#212529;
             }
           }
         }
-        
         .review-profession {
-          margin: auto 10px ;
+          margin: 12px 10px ;
 
         p {
           margin: 0;
         }
       }
-
       .review-gear {
         margin: auto 10px auto auto ;
         text-align: right;
-        
         .fas {
           color: black;
           margin-right: 5px;
           font-size: 20px;
         }
-        
-        
       }
     }
     .review-title {
@@ -150,8 +146,6 @@
         height: 100%;
       }
     }
-    
-    
     
     .review-lower {
       border: solid 3px $index-color;
@@ -181,11 +175,119 @@
     }
   }
 }
+// スマホ対応
+@media screen and (max-width: 559px) {
+  .introduction {
+    position: relative;
+    .introduction-img {
+      height: 70%;
+      width: 70%;
+      margin: 50px auto;
+    }
+    h1 {
+      position: absolute;
+      top: 9%;
+      left: 17%;
+      color: white;
+      font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    }
+  }
+  .search-box {
+    margin: 10px;
+    .search-keyword {
+      margin: 30px 10px;
+    }
+    .search-upper {
+      .search-form {
+        width: 30%;
+        label{
+          margin-bottom: 10px;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .search-row {
+      margin-top: 20px;
+      display: flex;
+      .search-form {
+        width: 30%;
+        label{
+          margin-bottom: 10px;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .search-submit {
+      margin-top: 30px;
+    }
+  }
 
-/* スマホ表示時 */
-@media screen and(min-width: 560px) {
-  
+  .review-contents {
+    .review-box {
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+      .review-upper-row {
+        height: 70px;
+        width: 100%;
+        position: relative;
+        font-weight: 600;
+        .review_user__img {
+          width: 40px;
+          height: 40px;
+          
+          .user-img {
+            width:  40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: auto 0px;
+            object-fit: cover;
+          }
+        }
+
+        .review-nickname {
+          margin: 12px 5px ;
+          font-size: 13px;
+          p {
+            .nickname {
+              text-decoration: none;
+              color:#212529;
+            }
+          }
+        }
+        .review-profession {
+          margin: 12px 5px ;
+          font-size: 13px;
+        p {
+          margin: 0;
+        }
+      }
+      .review-gear {
+        margin: auto 10px auto auto ;
+        text-align: right;
+        .fas {
+          color: black;
+          margin-right: 5px;
+          font-size: 15px;
+        }
+      }
+    }
+    .review-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px 0 0 5px;
+    }
+  }
 }
+}
+
+
 
 
 

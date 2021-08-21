@@ -25,13 +25,12 @@
 
 .search-box {
   padding: 0.5em 1em;
-  margin: 2em 0;
   border: double 5px #222e3e;
-  margin: 100px 50px 0 50px;
+  margin: 10%;
 }
 
 .search-box .search-keyword {
-  margin: 10px 150px 30px 150px;
+  margin: 30px 150px;
 }
 
 .search-box .search-upper {
@@ -43,6 +42,11 @@
 .search-box .search-upper .search-form {
   margin-left: auto;
   margin-right: auto;
+  width: 20%;
+}
+
+.search-box .search-upper .search-form label {
+  margin-bottom: 5px;
 }
 
 .search-box .search-upper .search-form select {
@@ -59,6 +63,11 @@
 .search-box .search-row .search-form {
   margin-left: auto;
   margin-right: auto;
+  width: 20%;
+}
+
+.search-box .search-row .search-form label {
+  margin-bottom: 5px;
 }
 
 .search-box .search-row .search-form select {
@@ -71,13 +80,9 @@
   color: white;
 }
 
-.review-contents {
-  margin-top: 50px;
-}
-
 .review-contents .review-box {
   padding: 0.5em 1em;
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -109,23 +114,16 @@
 }
 
 .review-contents .review-box .review-upper-row .review-nickname {
-  margin: auto 10px;
+  margin: 12px 10px;
 }
 
-.review-contents .review-box .review-upper-row .review-nickname .nickname {
+.review-contents .review-box .review-upper-row .review-nickname p .nickname {
   text-decoration: none;
   color: #212529;
 }
 
-.review-contents .review-box .review-upper-row .review-nickname .nickname:hover {
-  -webkit-box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
-}
-
 .review-contents .review-box .review-upper-row .review-profession {
-  margin: auto 10px;
+  margin: 12px 10px;
 }
 
 .review-contents .review-box .review-upper-row .review-profession p {
@@ -202,5 +200,108 @@
   padding-top: 3px;
 }
 
-/* スマホ表示時 */
+@media screen and (max-width: 559px) {
+  .introduction {
+    position: relative;
+  }
+  .introduction .introduction-img {
+    height: 70%;
+    width: 70%;
+    margin: 50px auto;
+  }
+  .introduction h1 {
+    position: absolute;
+    top: 9%;
+    left: 17%;
+    color: white;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  }
+  .search-box {
+    margin: 10px;
+  }
+  .search-box .search-keyword {
+    margin: 30px 10px;
+  }
+  .search-box .search-upper .search-form {
+    width: 30%;
+  }
+  .search-box .search-upper .search-form label {
+    margin-bottom: 10px;
+  }
+  .search-box .search-upper .search-form select {
+    width: 100%;
+  }
+  .search-box .search-row {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-box .search-row .search-form {
+    width: 30%;
+  }
+  .search-box .search-row .search-form label {
+    margin-bottom: 10px;
+  }
+  .search-box .search-row .search-form select {
+    width: 100%;
+  }
+  .search-box .search-submit {
+    margin-top: 30px;
+  }
+  .review-contents .review-box {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .review-contents .review-box .review-upper-row {
+    height: 70px;
+    width: 100%;
+    position: relative;
+    font-weight: 600;
+  }
+  .review-contents .review-box .review-upper-row .review_user__img {
+    width: 40px;
+    height: 40px;
+  }
+  .review-contents .review-box .review-upper-row .review_user__img .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .review-contents .review-box .review-upper-row .review-nickname {
+    margin: 12px 5px;
+    font-size: 13px;
+  }
+  .review-contents .review-box .review-upper-row .review-nickname p .nickname {
+    text-decoration: none;
+    color: #212529;
+  }
+  .review-contents .review-box .review-upper-row .review-profession {
+    margin: 12px 5px;
+    font-size: 13px;
+  }
+  .review-contents .review-box .review-upper-row .review-profession p {
+    margin: 0;
+  }
+  .review-contents .review-box .review-upper-row .review-gear {
+    margin: auto 10px auto auto;
+    text-align: right;
+  }
+  .review-contents .review-box .review-upper-row .review-gear .fas {
+    color: black;
+    margin-right: 5px;
+    font-size: 15px;
+  }
+  .review-contents .review-box .review-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0 0 5px;
+  }
+}
 /*# sourceMappingURL=index.css.map */
