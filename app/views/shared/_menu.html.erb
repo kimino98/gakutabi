@@ -1,0 +1,22 @@
+<nav class="mobile-menu">
+  <ul class="mobile-menu__main">
+    <% if user_signed_in? %>
+      <li class="mobile-menu__item">
+        <%= link_to current_user.nickname, "/users/#{current_user.id}", class: "menu" %>
+      </li>
+      <li class="mobile-menu__item">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "menu" %>
+      </li>
+      <li class="mobile-menu__item">
+        <%= link_to('投稿', new_review_path, class: "menu") %>
+      </li>
+     <% else %>
+      <li class="mobile-menu__item">
+        <%= link_to 'ログイン', new_user_session_path, class: "menu" %>
+      </li>
+      <li class="mobile-menu__item">
+        <%= link_to '新規登録', new_user_registration_path, class: "menu" %>
+      </li>
+    <% end %>
+  </ul>
+</nav> 
