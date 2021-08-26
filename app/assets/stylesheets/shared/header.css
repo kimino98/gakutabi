@@ -4,61 +4,84 @@
 }
 
 .header {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
   background-color: #364e96;
-}
-
-.header .header-top-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
 }
 
-.header .header-top-content .header-icon .icon {
-  width: 100px;
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
-.header .header-top-content .nav {
-  margin-left: auto;
-}
-
-.header .header-top-content .nav .lists-right {
-  float: right;
-  margin: auto 0;
-}
-
-.header .header-top-content .nav .lists-right li {
-  display: inline-block;
-}
-
-.header .header-top-content .nav .lists-right li .user-nickname {
-  text-decoration: none;
-  color: whitesmoke;
+.header__nav {
+  display: block;
   margin-right: 10px;
 }
 
-.header .header-top-content .nav .lists-right li .logout {
-  text-decoration: none;
-  color: whitesmoke;
-  margin-right: 10px;
+.header__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.header .header-top-content .nav .lists-right li .post-btn {
-  text-decoration: none;
-  color: whitesmoke;
-  margin-right: 15px;
+.header__li {
+  margin-left: 30px;
 }
 
-.header .header-top-content .nav .lists-right li .login {
-  text-decoration: none;
-  color: whitesmoke;
-  margin-right: 10px;
+.header__li > a {
+  color: white;
+  text-decoration: none !important;
 }
 
-.header .header-top-content .nav .lists-right li .sign-up {
-  text-decoration: none;
-  color: whitesmoke;
-  margin-right: 20px;
+.header__li > a:hover {
+  color: white;
+}
+
+.header .logo__img {
+  height: 80px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+#container {
+  position: relative;
+  background-color: white;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 559px) {
+  .header__nav {
+    display: none;
+  }
+  .header .mobile-menu__btn {
+    display: block;
+  }
 }
 /*# sourceMappingURL=header.css.map */
