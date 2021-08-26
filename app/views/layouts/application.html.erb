@@ -16,8 +16,14 @@
   </head>
 
   <body>
-   <%= render 'shared/header' %>
-   <%= render 'shared/flash' %>
-    <%= yield %>
+    <div id="global-container">
+      <div id="container">
+        <%= render 'shared/header' %>
+        <%= render 'shared/flash' %>
+        <%= yield %>
+        <%= javascript_pack_tag 'mobile-menu' %>
+      </div>
+      <%= render 'shared/menu'%>
+    </div>
   </body>
 </html>
