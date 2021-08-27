@@ -7,24 +7,6 @@
     border-radius: 50%;
   }
   
-  
-  .introduction {
-    position: relative;
-    .introduction-img {
-      height: 70%;
-      width: 70%;
-      margin: 50px auto;
-    }
-    p {
-      position: absolute;
-      top: 10%;
-      left: 17%;
-      color: white;
-      font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-      font-size: 2.0rem;
-    }
-  }
-
   .search-box {
     padding: 0.5em 1em;
     border: double 5px #222e3e;
@@ -82,7 +64,6 @@
         padding: 0.5em;
         border-radius: 0.5em;
         font-weight: 800; 
-        font-size: 4vmin;
 
         .review_user-main {
           display: flex;
@@ -192,22 +173,7 @@
 
 // スマホ対応
 @media screen and (max-width: 559px) {
-  .introduction {
-    position: relative;
-    .introduction-img {
-      height: 70%;
-      width: 70%;
-      margin: 50px auto;
-    }
-    p {
-      position: absolute;
-      top: 18%;
-      left: 17%;
-      color: white;
-      font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-      font-size: 1.0rem;
-    }
-  }
+  
   .search-box {
     margin: 10px;
     .search-keyword {
