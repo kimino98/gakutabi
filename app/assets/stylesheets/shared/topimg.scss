@@ -1,0 +1,47 @@
+.introduction {
+  position: relative;
+  .introduction-img {
+    height: 70%;
+    width: 70%;
+    margin: 50px auto;
+  }
+  p {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    color: white;
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+    font-size: 7vmin;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .introduction {
+    p {
+      top: 18%;
+      left: 17%;
+      font-size: 4vmin;
+    }
+  }
+}
+
+// iphone8 
+@media screen and (max-width: 376px) {
+  .introduction {
+    p {
+      top: 23%;
+      left: 17%;
+      font-size: 3vmin;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .introduction {
+    p {
+      top: 15%;
+      left: 17%;
+      font-size: 5vmin;
+    }
+  }
+}
