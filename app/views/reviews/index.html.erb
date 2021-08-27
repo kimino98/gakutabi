@@ -1,4 +1,5 @@
 <div class="main">
+  <% breadcrumb :root %>
   <%= render 'shared/topimg'%> <%# スライダートップ画像 %>
   <div class="search-box">
     <%= search_form_for @q, url: search_reviews_path do |f| %>

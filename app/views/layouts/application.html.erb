@@ -20,6 +20,9 @@
       <div id="container">
         <%= render 'shared/header' %>
         <%= render 'shared/flash' %>
+        <div class="breadcrumb">
+          <%= breadcrumbs separator: " &rsaquo; " %>
+         </div>   
         <%= yield %>
         <%= javascript_pack_tag 'mobile-menu' %>
       </div>
