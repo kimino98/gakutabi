@@ -1,20 +1,21 @@
 <div class="review-contents">
   <div class="review-box">
     <div class="review-upper-row">
-      <div class="review_user__img">
-        <%if @review.user.avatar.attached?%>
-          <%=link_to (image_tag @review.user.avatar, class: "user-img"), "#"%>
-         <%else%>
-          <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
-        <%end%>
+      <div class="review_user-main">
+        <div class="review_user-img">
+          <%if @review.user.avatar.attached?%>
+            <%=link_to (image_tag review.user.avatar, class: "user-img"), "#"%>
+           <%else%>
+            <%=link_to (image_tag 'default-icon.png' , class: "user-img"), "#"%>
+          <%end%>
+        </div>
+        <div class="review_user-nickname">
+          <p><%= link_to @review.user.nickname, user_path(@review.user.id), class: "nickname" %>さんの投稿</p>
+        </div>
+        <div class="review_user-profession">
+          <p>職業：<%= @review.user.profession.name %></p>
+        </div>
       </div>
-      
-       <div class="review-nickname">
-            <p><%= link_to @review.user.nickname, user_path(@review.user.id), class: "nickname" %>さんの投稿</p>
-          </div>
-          <div class="review-profession">
-            <p>職業：<%= @review.user.profession.name %></p>
-          </div>
     </div>
 
     <div class="review-title">

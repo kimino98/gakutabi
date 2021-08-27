@@ -90,56 +90,72 @@
 
 .review-contents .review-box .review-upper-row {
   height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
   border: solid 3px #364e96;
   padding: 0.5em;
   border-radius: 0.5em;
   font-weight: 800;
+  font-size: 4vmin;
 }
 
-.review-contents .review-box .review-upper-row .review_user__img {
-  width: 50px;
-  height: 50px;
+.review-contents .review-box .review-upper-row .review_user-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
 }
 
-.review-contents .review-box .review-upper-row .review_user__img .user-img {
-  width: 50px;
+.review-contents .review-box .review-upper-row .review_user-main .review_user-img {
   height: 50px;
+  width: 50px;
+}
+
+.review-contents .review-box .review-upper-row .review_user-main .review_user-img .user-img {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  margin: auto 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.review-contents .review-box .review-upper-row .review-nickname {
-  margin: 12px 10px;
+.review-contents .review-box .review-upper-row .review_user-nickname {
+  margin: 10px;
 }
 
-.review-contents .review-box .review-upper-row .review-nickname p .nickname {
+.review-contents .review-box .review-upper-row .review_user-nickname p {
+  color: black;
+  margin-bottom: -16px;
+  text-decoration: none;
+}
+
+.review-contents .review-box .review-upper-row .review_user-nickname p .nickname {
   text-decoration: none;
   color: #212529;
 }
 
-.review-contents .review-box .review-upper-row .review-profession {
-  margin: 12px 10px;
+.review-contents .review-box .review-upper-row .review_user-profession {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.review-contents .review-box .review-upper-row .review-profession p {
-  margin: 0;
+.review-contents .review-box .review-upper-row .review_user-profession p {
+  margin-bottom: -16px;
 }
 
-.review-contents .review-box .review-upper-row .review-gear {
-  margin: auto 10px auto auto;
-  text-align: right;
+.review-contents .review-box .review-upper-row .review_user-gear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0 10px auto;
 }
 
-.review-contents .review-box .review-upper-row .review-gear .fas {
-  color: black;
+.review-contents .review-box .review-upper-row .review_user-gear .review_user-edit {
   margin-right: 5px;
-  font-size: 20px;
+}
+
+.review-contents .review-box .review-upper-row .review_user-gear .review_user-edit a {
+  color: #212529;
+}
+
+.review-contents .review-box .review-upper-row .review_user-gear .review_user-delete a {
+  color: #212529;
 }
 
 .review-contents .review-box .review-title {
@@ -212,11 +228,11 @@
   }
   .introduction p {
     position: absolute;
-    top: 17%;
+    top: 18%;
     left: 17%;
     color: white;
     font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
   .search-box {
     margin: 10px;
@@ -256,54 +272,15 @@
     margin-left: 0px;
     margin-right: 0px;
   }
-  .review-contents .review-box .review-upper-row {
-    height: 70px;
-    width: 100%;
-    position: relative;
-    font-weight: 600;
-  }
-  .review-contents .review-box .review-upper-row .review_user__img {
-    width: 40px;
-    height: 40px;
-  }
-  .review-contents .review-box .review-upper-row .review_user__img .user-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: auto 0px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .review-contents .review-box .review-upper-row .review-nickname {
-    margin: 12px 5px;
-    font-size: 13px;
-  }
-  .review-contents .review-box .review-upper-row .review-nickname p .nickname {
-    text-decoration: none;
-    color: #212529;
-  }
-  .review-contents .review-box .review-upper-row .review-profession {
-    margin: 12px 5px;
-    font-size: 13px;
-  }
-  .review-contents .review-box .review-upper-row .review-profession p {
-    margin: 0;
-  }
-  .review-contents .review-box .review-upper-row .review-gear {
-    margin: auto 10px auto auto;
-    text-align: right;
-  }
-  .review-contents .review-box .review-upper-row .review-gear .fas {
-    color: black;
-    margin-right: 5px;
-    font-size: 15px;
-  }
-  .review-contents .review-box .review-title {
+  .review-contents .review-title {
     font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 0 0 5px;
+  }
+  .review_user-profession {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -76,106 +76,120 @@
       margin-left: auto;
       margin-right: auto;
       
-      
       .review-upper-row {
         height: 70px;
-        display: flex;
-        position: relative;
         border: solid 3px $index-color;
         padding: 0.5em;
         border-radius: 0.5em;
         font-weight: 800; 
-        .review_user__img {
-          width: 50px;
-          height: 50px;
+        font-size: 4vmin;
+
+        .review_user-main {
+          display: flex;
+          margin:auto;
           
-          .user-img {
-            width:  50px;
+          .review_user-img {
             height: 50px;
-            border-radius: 50%;
-            margin: auto 0px;
-            object-fit: cover;
-          }
-        }
-        .review-nickname {
-          margin: 12px 10px ;
-          p {
-            .nickname {
-              text-decoration: none;
-              color:#212529;
+            width: 50px;
+            .user-img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
             }
           }
         }
-        .review-profession {
-          margin: 12px 10px ;
-
-        p {
-          margin: 0;
+        .review_user-nickname {
+          margin: 10px;
+          p {
+            
+            color: black;
+            margin-bottom: -16px;
+            text-decoration: none;
+            .nickname {
+              text-decoration: none;
+              color: #212529;
+            }
+          }
+        }
+        .review_user-profession {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          p {
+            margin-bottom: -16px;
+          }
+        }
+        .review_user-gear {
+          display: flex;
+          margin: 10px 0 10px auto;
+          .review_user-edit {
+            margin-right: 5px;
+            a {
+              color: #212529;
+            }
+          }
+          .review_user-delete {
+            a {
+              color: #212529;
+            }
+          }
         }
       }
-      .review-gear {
-        margin: auto 10px auto auto ;
-        text-align: right;
-        .fas {
-          color: black;
+        
+    
+      .review-title {
+        font-size: 25px;
+        background-color: $index-color;
+        color: #ffff;/*文字色*/
+        font-weight: 600;
+        border: solid 3px $index-color;
+        border-radius: 0.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 0 0 5px;
+      }
+      
+      .review-image {
+        height: 100%;
+        width: 100%;
+        &:hover {
+          box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+          transform: translateY(-4px);
+        }
+        .review-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    
+      .review-lower {
+        border: solid 3px $index-color;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        margin-top: 10px;
+        
+        .review-info {
           margin-right: 5px;
           font-size: 20px;
-        }
-      }
-    }
-    .review-title {
-      font-size: 25px;
-      background-color: $index-color;
-      color: #ffff;/*文字色*/
-      font-weight: 600;
-      border: solid 3px $index-color;
-      border-radius: 0.5em;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding: 10px 0 0 5px;
-    }
-    
-    .review-image {
-      height: 100%;
-      width: 100%;
-      &:hover {
-        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-        transform: translateY(-4px);
-      }
-      .review-img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    
-    .review-lower {
-      border: solid 3px $index-color;
-      padding: 0.5em;
-      border-radius: 0.5em;
-      margin-top: 10px;
-      
-      .review-info {
-        margin-right: 5px;
-        font-size: 20px;
-        display: flex;
+          display: flex;
 
-        .like-info {
-          margin-right: 10px;
-        }
-        
-        .review-comment {
-          margin-right: 10px;
-         }
-        
-        .post-time {
-          font-size: medium;
-          margin-left: auto;
-          padding-top: 3px;
+          .like-info {
+            margin-right: 10px;
+          }
+          
+          .review-comment {
+            margin-right: 10px;
+          }
+          
+          .post-time {
+            font-size: medium;
+            margin-left: auto;
+            padding-top: 3px;
+          }
         }
       }
     }
   }
-}
+
 // スマホ対応
 @media screen and (max-width: 559px) {
   .introduction {
@@ -187,11 +201,11 @@
     }
     p {
       position: absolute;
-      top: 17%;
+      top: 18%;
       left: 17%;
       color: white;
       font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.0rem;
     }
   }
   .search-box {
@@ -233,50 +247,6 @@
       width: 100%;
       margin-left: 0px;
       margin-right: 0px;
-      .review-upper-row {
-        height: 70px;
-        width: 100%;
-        position: relative;
-        font-weight: 600;
-        .review_user__img {
-          width: 40px;
-          height: 40px;
-          
-          .user-img {
-            width:  40px;
-            height: 40px;
-            border-radius: 50%;
-            margin: auto 0px;
-            object-fit: cover;
-          }
-        }
-
-        .review-nickname {
-          margin: 12px 5px ;
-          font-size: 13px;
-          p {
-            .nickname {
-              text-decoration: none;
-              color:#212529;
-            }
-          }
-        }
-        .review-profession {
-          margin: 12px 5px ;
-          font-size: 13px;
-        p {
-          margin: 0;
-        }
-      }
-      .review-gear {
-        margin: auto 10px auto auto ;
-        text-align: right;
-        .fas {
-          color: black;
-          margin-right: 5px;
-          font-size: 15px;
-        }
-      }
     }
     .review-title {
       font-size: 20px;
@@ -286,8 +256,11 @@
       padding: 10px 0 0 5px;
     }
   }
+  .review_user-profession {
+   display: none;
+  }
 }
-}
+
 
 
 

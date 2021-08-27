@@ -13,7 +13,7 @@ class MobileMenu {
   }
 
   _toggle() {
-      this.DOM.container.classList.toggle('menu-open');
+      this.DOM.container.classList.toggle('menu-open'); 
   }
 
   _addEvent() {
