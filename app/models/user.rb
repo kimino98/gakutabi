@@ -25,4 +25,14 @@ class User < ApplicationRecord
     validates :profession_id, numericality: { other_than: 1, message: 'を選択して下さい'}
   end
     validates :profile, length: { maximum: 100}
+
+  #ゲストログイン機能
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64(8)
+      user.nickname = 'ゲスト'
+      user.company_name = 'ゲスト中学校'
+      user.profession_id = 2
+    end
+  end
 end
