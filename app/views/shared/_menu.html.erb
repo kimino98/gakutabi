@@ -17,6 +17,9 @@
       <li class="mobile-menu__item">
         <%= link_to '新規登録', new_user_registration_path, class: "menu" %>
       </li>
+      <li class="mobile-menu__item">
+        <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "menu" %>
+      </li>
     <% end %>
   </ul>
 </nav> 
