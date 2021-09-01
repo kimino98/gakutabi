@@ -15,30 +15,38 @@
   left: 17%;
   color: white;
   font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-  font-size: 7vmin;
-}
-
-@media screen and (max-width: 559px) {
-  .introduction p {
-    top: 18%;
-    left: 17%;
-    font-size: 4vmin;
-  }
-}
-
-@media screen and (max-width: 376px) {
-  .introduction p {
-    top: 23%;
-    left: 17%;
-    font-size: 3vmin;
-  }
+  font-size: 200%;
 }
 
 @media screen and (max-width: 960px) {
   .introduction p {
     top: 15%;
     left: 17%;
-    font-size: 5vmin;
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .introduction p {
+    top: 20%;
+    left: 17%;
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .introduction p {
+    top: 22%;
+    left: 17%;
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .introduction p {
+    top: 22%;
+    left: 17%;
+    font-size: 80%;
   }
 }
 /*# sourceMappingURL=topimg.css.map */
