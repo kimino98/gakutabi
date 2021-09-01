@@ -6,7 +6,7 @@ FactoryBot.define do
     password_confirmation {password}
     company_name          {Faker::Company.name}
     profession_id         {Faker::Number.within(range: 2..8)}
-
+    profile               {Faker::Lorem.sentence}
     after(:build) do |user|
       user.avatar.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
     end
