@@ -4,6 +4,7 @@
     <title>Gakutabi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,8 +16,17 @@
   </head>
 
   <body>
-   <%= render 'shared/header' %>
-   <%= render 'shared/flash' %>
-    <%= yield %>
+    <div id="global-container">
+      <div id="container">
+        <%= render 'shared/header' %>
+        <%= render 'shared/flash' %>
+        <div class="breadcrumb">
+          <%= breadcrumbs separator: " &rsaquo; " %>
+         </div>   
+        <%= yield %>
+        <%= javascript_pack_tag 'mobile-menu' %>
+      </div>
+      <%= render 'shared/menu'%>
+    </div>
   </body>
 </html>

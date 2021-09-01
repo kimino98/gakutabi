@@ -1,4 +1,5 @@
   $index-color:#364e96;
+  
 
   .default-icon {
     width: 50px;
@@ -6,108 +7,40 @@
     border-radius: 50%;
   }
   
-  
-  .introduction {
-    position: relative;
-    .introduction-img {
-      height: 70%;
-      width: 70%;
-      margin: 0 auto;
-      padding-top: 100px;
-    }
-    .box-string1 {
-      position: absolute;
-      top: 360px;
-      left: 360px;
-      background-color: rgba(0, 206, 209,.8);
-      border-radius: 10px;
-      p {
-        color: white;
-        font-size: large;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-        span {
-          font-weight: 800;
-          border-bottom: solid 3px white;
-        }
-      }
-    }
-    .box-string2 {
-      position: absolute;
-      top: 360px;
-      left: 420px;
-      background-color: rgba(128, 128, 128,.8);
-      border-radius: 10px;
-      p {
-        color: white;
-        font-size: large;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
-    }
-    .box-string3 {
-      position: absolute;
-      top: 360px;
-      left: 430px;
-      background-color: rgba(30, 144, 255,.8);
-      border-radius: 10px;
-      p{
-        color: white;
-        font-size: large;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
-    }
-
-    .box-string4 {
-      position: absolute;
-      top: 360px;
-      left: 300px;
-      background-color: rgba(218, 165, 32,.8);
-      border-radius: 10px;
-      p{
-        color: white;
-        font-size: large;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 1.7;
-      }
-    }
-    h1 {
-      position: absolute;
-      top: 120px;
-      left: 250px;
-      color: white;
-      font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-    }
-  }
-
   .search-box {
     padding: 0.5em 1em;
-    margin: 2em 0;
     border: double 5px #222e3e;
-    margin: 100px 50px 0 50px;
+    margin: 10%;
     .search-keyword {
-      margin: 10px 150px 30px 150px ;
+      margin: 30px 150px;
     }
     .search-upper {
       display: flex;
       .search-form {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        label{
+          margin-bottom: 5px;
+        }
+        select {
+          width: 100%;
+        }
       }
     }
     .search-row {
       margin-top: 20px;
       display: flex;
       .search-form {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        label{
+          margin-bottom: 5px;
+        }
+        select {
+          width: 100%;
+        }
       }
     }
     .search-submit {
@@ -117,135 +50,185 @@
     }
   }
 
-  
-  
-  
-  .review-img {
-    height: 30%;
-    width: 30%;
-  }
-  
   .review-contents {
-    margin: 50px 50px;
     
     .review-box {
       padding: 0.5em 1em;
-      width: 70%;
+      width: 60%;
       margin-left: auto;
       margin-right: auto;
       
-      
       .review-upper-row {
         height: 70px;
-        display: flex;
-        position: relative;
         border: solid 3px $index-color;
         padding: 0.5em;
         border-radius: 0.5em;
-        font-weight: 800;
+        font-weight: 800; 
+
+        .review_user-main {
+          display: flex;
+          margin:auto;
           
-        .review_user__img {
-          width: 50px;
-          height: 50px;
-          
-          .user-img {
-            width:  50px;
+          .review_user-img {
             height: 50px;
-            border-radius: 50%;
-            margin: auto 0px;
-            object-fit: cover;
-          }
-        }
-          
-        
-        .review-nickname {
-          margin: auto 10px ;
-          .nickname {
-            text-decoration: none;
-            color:#212529;
-            &:hover {
-              box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-	            transform: translateY(-4px);
+            width: 50px;
+            .user-img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
             }
           }
         }
-        
-        .review-profession {
-          margin: auto 10px ;
-
-        p {
-          margin: 0;
+        .review_user-nickname {
+          margin: 10px;
+          p {
+            
+            color: black;
+            margin-bottom: -16px;
+            text-decoration: none;
+            .nickname {
+              text-decoration: none;
+              color: #212529;
+            }
+          }
+        }
+        .review_user-profession {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          p {
+            margin-bottom: -16px;
+          }
+        }
+        .review_user-gear {
+          display: flex;
+          margin: 10px 0 10px auto;
+          .review_user-edit {
+            margin-right: 5px;
+            a {
+              color: #212529;
+            }
+          }
+          .review_user-delete {
+            a {
+              color: #212529;
+            }
+          }
         }
       }
-
-      .review-gear {
-        margin: auto 10px auto auto ;
-        text-align: right;
         
-        .fas {
-          color: black;
+    
+      .review-title {
+        font-size: 25px;
+        background-color: $index-color;
+        color: #ffff;/*文字色*/
+        font-weight: 600;
+        border: solid 3px $index-color;
+        border-radius: 0.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 0 0 5px;
+      }
+      
+      .review-image {
+        height: 100%;
+        width: 100%;
+        &:hover {
+          box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+          transform: translateY(-4px);
+        }
+        .review-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    
+      .review-lower {
+        border: solid 3px $index-color;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        margin-top: 10px;
+        
+        .review-info {
           margin-right: 5px;
           font-size: 20px;
+          display: flex;
+
+          .like-info {
+            margin-right: 10px;
+          }
+          
+          .review-comment {
+            margin-right: 10px;
+          }
+          
+          .post-time {
+            font-size: medium;
+            margin-left: auto;
+            padding-top: 3px;
+          }
         }
-        
-        
       }
     }
+  }
+
+// スマホ対応
+@media screen and (max-width: 559px) {
+  
+  .search-box {
+    margin: 10px;
+    .search-keyword {
+      margin: 30px 10px;
+    }
+    .search-upper {
+      .search-form {
+        width: 30%;
+        label{
+          margin-bottom: 10px;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .search-row {
+      margin-top: 20px;
+      display: flex;
+      .search-form {
+        width: 30%;
+        label{
+          margin-bottom: 10px;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .search-submit {
+      margin-top: 30px;
+    }
+  }
+
+  .review-contents {
+    .review-box {
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
     .review-title {
-      font-size: 25px;
-      background-color: $index-color;
-      color: #ffff;/*文字色*/
+      font-size: 20px;
       font-weight: 600;
-      border: solid 3px $index-color;
-      border-radius: 0.5em;
       margin-top: 10px;
       margin-bottom: 10px;
       padding: 10px 0 0 5px;
     }
-    
-    .tag_name {
-      background: linear-gradient(transparent 50%, #a8eaff 50%);
-      margin-bottom: 10px;
-    }
-    
-    .review-image {
-      &:hover {
-        box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-        transform: translateY(-4px);
-      }
-      
-      .review-img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    
-    .review-lower {
-      border: solid 3px $index-color;
-      padding: 0.5em;
-      border-radius: 0.5em;
-      margin-top: 10px;
-      
-      .review-info {
-        margin-right: 5px;
-        font-size: 20px;
-        display: flex;
-
-        .like-info {
-          margin-right: 10px;
-        }
-        
-        .review-comment {
-          margin-right: 10px;
-         }
-        
-        .post-time {
-          font-size: medium;
-          margin-left: auto;
-          padding-top: 3px;
-        }
-      }
-    }
+  }
+  .review_user-profession {
+   display: none;
   }
 }
+
+
+
+
+
 

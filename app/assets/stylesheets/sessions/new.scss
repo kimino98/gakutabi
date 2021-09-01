@@ -1,8 +1,8 @@
-.edit-main {
+.login-main {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  .edit-box {
+  .login-box {
     margin-top: 50px;
     .form-group {
       margin-right: 300px;
@@ -25,14 +25,13 @@
   }
   .action {
     margin-top: 20px;
-    margin-bottom: 100px;
   }
 }
 
-/* スマホ表示時 */
+ /* スマホ表示時 */
 @media (max-width: 599px) {
-  .edit-main {
-    .edit-box {
+  .login-main {
+    .login-box {
       .form-group {
         margin-right: 50px;
         margin-left: 50px;
@@ -43,11 +42,11 @@
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
-  .edit-main {
-    .edit-box {
+  .login-main {
+    .login-box {
       .form-group {
-        margin-right: 10px;
-        margin-left: 100px;
+        margin-right: 50px;
+        margin-left: 50px;
       }
     }
   }

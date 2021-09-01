@@ -1,20 +1,20 @@
 @charset "UTF-8";
-.edit-main {
+.new-user-main {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.edit-main .edit-box {
+.new-user-main .new-user-box {
   margin-top: 50px;
 }
 
-.edit-main .edit-box .form-group {
+.new-user-main .new-user-box .form-group {
   margin-right: 300px;
   margin-left: 300px;
 }
 
-.edit-main .edit-box .form-name {
+.new-user-main .new-user-box .form-name {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #212529;
@@ -22,23 +22,26 @@
   text-align: left;
 }
 
-.edit-main .edit-box .form-box {
+.new-user-main .new-user-box .form-box {
   text-align: left;
 }
 
-.edit-main .edit-box .form-box .input-default {
+.new-user-main .new-user-box .form-box .input-default {
   width: 500px;
   height: 30%;
 }
 
-.edit-main .action {
-  margin-top: 20px;
-  margin-bottom: 100px;
+.new-user-main .action {
+  margin-top: 40px;
+}
+
+.new-user-main .new-user-login {
+  margin-top: 50px;
 }
 
 /* スマホ表示時 */
 @media (max-width: 599px) {
-  .edit-main .edit-box .form-group {
+  .new-user-main .new-user-box .form-group {
     margin-right: 50px;
     margin-left: 50px;
   }
@@ -46,9 +49,9 @@
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
-  .edit-main .edit-box .form-group {
-    margin-right: 10px;
+  .new-user-main .new-user-box .form-group {
+    margin-right: 100px;
     margin-left: 100px;
   }
 }
-/*# sourceMappingURL=edit.css.map */
+/*# sourceMappingURL=new.css.map */

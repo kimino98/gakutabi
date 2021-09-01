@@ -20,7 +20,7 @@
     margin-top: 50px;
     margin-bottom: 20px;
     .impression-title {
-      margin: 0 350px 0 350px;
+      margin: 0 auto;
       h3 {
         margin-bottom: 20px;
         @include detail-title;
@@ -31,7 +31,7 @@
   .review-corona {
     margin-bottom: 20px;
     .corona-title {
-      margin: 10px 300px 0 300px;
+      margin: 10px auto;
       h3 {
         margin-bottom: 20px;
         @include detail-title;
@@ -41,80 +41,82 @@
 }
 .review-detail-box {
   .detail-title {
-    margin: 10px 350px 20px 350px;
+    margin: 10px auto;
     h3 {
       @include detail-title;
     }
   }
   .review-detail {
-    display: flex;
-    justify-content: space-around;
-
-    .event-info {
-      text-align: center;
-      p {
-        @include detail-info;
+    .review-detail-upper {
+      display: flex;
+      justify-content: space-around;
+      .event-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
+      }
+      
+      .hotel_type-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
+      }
+      
+      .grade-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
       }
     }
 
-    .hotel_type-info {
-      text-align: center;
-      p {
-        @include detail-info;
+    .review-detail-row {
+      display: flex;
+      justify-content: space-around;
+      .season-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
       }
-    }
-
-
-    .grade-info {
-      text-align: center;
-      p {
-        @include detail-info;
+    
+      .region-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
       }
-    }
-
-    .season-info {
-      text-align: center;
-      p {
-        @include detail-info;
+      .student_count-info {
+        p {
+          @include detail-info;
+        }
       }
-    }
-
-    .region-info {
-      text-align: center;
-      p {
-        @include detail-info;
-      }
-    }
-
-    .student_count-info {
-      p {
-        @include detail-info;
-      }
-    }
-
-    .price-info {
-      p {
-        @include detail-info;
+      .price-info {
+        text-align: center;
+        p {
+          @include detail-info;
+        }
       }
     }
   }
 }
 
 .comment-box {
-  margin: 30px 100px 0 100px;
+  margin: 5% 10% 0 10%;
   .comment-title {
-    margin: 0 400px 10px 400px;
     h3 {
       @include detail-title;
     }
   }
   .comment-form {
     text-align: center;
+    margin: 10px auto;
     .comment-btn {
       margin-top: 10px;
     }
   }
-
   .comment-list {
     .comment-area {
       padding: 0.5em 1em;
@@ -149,6 +151,97 @@
       }
       .comment-time{
         text-align: right;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 560px) {
+  .review-impression-box {
+    .review-impression {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      .impression-title {
+        margin: 0 50px 0 50px;
+        h3 {
+          margin-bottom: 20px;
+          @include detail-title;
+        }
+      }
+    }
+  
+    .review-corona {
+      margin-bottom: 20px;
+      .corona-title {
+        margin: 10px 100px 0 100px;
+        h3 {
+          margin-bottom: 20px;
+          @include detail-title;
+        }
+      }
+    }
+  }
+  .review-detail-box {
+    .detail-title {
+      margin: 10px 100px 20px 100px;
+      h3 {
+        @include detail-title;
+      }
+    }
+    .review-detail {
+      .review-detail-upper {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        .event-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
+        
+        .hotel_type-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
+        
+        .grade-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
+      }
+  
+      .review-detail-row {
+        display: flex;
+        justify-content: space-around;
+        .season-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
+      
+        .region-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
+        .student_count-info {
+          p {
+            @include detail-info;
+          }
+        }
+        .price-info {
+          text-align: center;
+          p {
+            @include detail-info;
+          }
+        }
       }
     }
   }
