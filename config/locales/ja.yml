@@ -13,6 +13,7 @@ ja:
         nickname: ニックネーム
         company_name: ご所属先名
         profession_id: ご職業
+        profile: 自己紹介
       
       review:
         faclity_name: 施設名
@@ -26,3 +27,6 @@ ja:
         student_count_id: 生徒人数
         price: 料金
         event_id: 行事
+
+      comment:
+        content: コメント
