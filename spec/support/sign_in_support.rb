@@ -4,6 +4,6 @@ module SignInSupport
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
     find('input[name="commit"]').click
-    expect(current_path).to eq root_path
+    expect(current_path).to eq(root_path)
   end
 end
