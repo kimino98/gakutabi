@@ -133,6 +133,23 @@ RSpec.describe Review, type: :model do
         expect(@review.errors.full_messages).to include('料金は9999999以下の値にしてください')
       end
 
+      it 'event_idが空の場合投稿できない' do
+        @review.event_id = ''
+        @review.valid?
+        expect(@review.errors.full_messages).to include('行事を入力してください')
+      end
+
+      it 'event_idが1の場合投稿できない' do
+        @review.event_id = 1
+        @review.valid?
+        expect(@review.errors.full_messages).to include('行事を選択してください')
+      end
+
+      it 'ユーザが紐づいていないと投稿できない' do
+        @review.user = nil
+        @review.valid?
+        expect(@review.errors.full_messages).to include('Userを入力してください')
+      end
     end
   end
 end

@@ -9,6 +9,7 @@ FactoryBot.define do
     price            {Faker::Number.number(digits: 4)}
     text             {Faker::Lorem.sentence}
     safety           {Faker::Lorem.sentence}
+    event_id         {Faker::Number.within(range: 2..5)}
     association :user
 
     after(:build) do |review|

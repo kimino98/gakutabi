@@ -106,6 +106,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('ご職業を選択して下さい')
       end
+
+      it 'profileが100文字以上だと登録できない' do
+        @user.profile = 'テストです' * 100
+        @user.valid?
+        expect(@user.errors.full_messages).to include('自己紹介は100文字以内で入力してください')
+      end
     end
   end
 end

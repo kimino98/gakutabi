@@ -7,12 +7,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   
   #投稿写真
   has_one_attached :avatar
   #コメント機能
-  has_many :conmments
+  has_many :conmments, dependent: :destroy
   #いいね機能
   has_many :likes, dependent: :destroy
   has_many :liked_reviews, through: :likes, source: :review
