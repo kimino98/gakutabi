@@ -4,16 +4,12 @@ lock '3.16.0'
 # アプリケーション名
 set :application, 'gakutabi'
 
-# deploy先のディレクトリ。
-set :deploy_to, '/var/www/rails/gakutabi'
-
 # cloneするgitのレポジトリ
 set :repo_url, 'git@github.com:kimino98/gakutabi.git'
 
 # シンボリックリンクをはるフォルダ。
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-
 set :rbenv_type, :user
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # rubyのバージョン
 set :rbenv_ruby, '2.6.5'
