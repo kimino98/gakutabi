@@ -41,6 +41,7 @@ server "18.178.218.65", user: "ec2-user", roles: %w{app db web}
 #
 # Global options
 # --------------
+set :ssh_options, keys: "~/.ssh/gakutabi.pem"
 #  set :ssh_options, {
 #    keys: %w(/home/user_name/.ssh/id_rsa),
 #    forward_agent: false,
