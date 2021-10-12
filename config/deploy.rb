@@ -30,5 +30,5 @@ namespace :deploy do
   end
 end
 
-
+append :linked_files, "config/master.key"
 
