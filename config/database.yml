@@ -49,8 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: <%= Rails.application.credentials['DB_NAME'] %>
-  username: <%= Rails.application.credentials['DB_USERNAME'] %>
-  password: <%= Rails.application.credentials['DB_PASSWORD'] %>
-  host: <%= Rails.application.credentials['DB_HOSTNAME'] %>
+  database: <%= Rails.application.credentials.db[:NAME] %>
+  username: <%= Rails.application.credentials.db[:USERNAME] %>
+  password: <%= Rails.application.credentials.db[:PASSWORD] %>
+  host: <%= Rails.application.credentials.db[:HOSTNAME] %>
   socket: /var/lib/mysql/mysql.sock
