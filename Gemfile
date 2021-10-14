@@ -89,3 +89,5 @@ gem 'kaminari'
 gem 'ransack'
 
 gem 'gretel'
+
+gem 'dotenv-rails'
