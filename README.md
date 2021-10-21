@@ -14,7 +14,8 @@
 
 <br>
 
-市場分析も含めたスライドを作成しましたのでご参照下さい(https://docs.google.com/presentation/d/1iYUxGW1AYfudC75bWHxQhs3iWQV7-vmraths-l8WEC0/edit?usp=sharing)<br>
+市場分析も含めたスライドを作成しましたのでご参照下さい<br>
+https://docs.google.com/presentation/d/1iYUxGW1AYfudC75bWHxQhs3iWQV7-vmraths-l8WEC0/edit?usp=sharing<br>
 <br>
 # 本番環境URL
 
@@ -99,12 +100,41 @@ password: 1898
 # 機能一部紹介
 
 ### ユーザー登録機能
+[![Image from Gyazo](https://i.gyazo.com/2419a3bd273a46cbb1bc41a046867331.gif)](https://gyazo.com/2419a3bd273a46cbb1bc41a046867331)
+
+* 職業(教員・旅行会社・施設担当者)をプルダウン形式にて選択(ActiveHash)
+  * どの職業の人が投稿したかが瞬時に分かる
+* 登録に不備があった場合エラー文表示(日本語化)
 
 ### ユーザーマイページ機能
+[![Image from Gyazo](https://i.gyazo.com/ff1132b1fdf8d4ac1bc20a0d6e2dec19.gif)](https://gyazo.com/ff1132b1fdf8d4ac1bc20a0d6e2dec19)
+
+* プロフィール編集機能
+  * プロフィール画像の変更や自己紹介文を付け加る事が可能
+* 自分の投稿一覧・いいねした一覧のタブ切り替え
+  * いいねした投稿を見返すための機能
+
+
 
 ### 投稿機能
+[![Image from Gyazo](https://i.gyazo.com/92f046c034a88595786b493a10dfd817.gif)](https://gyazo.com/92f046c034a88595786b493a10dfd817)
+
+* いつ・どの行事で・生徒数・場所と細かくする
+  * 調べたい投稿を条件別で検索するため
+* 画像のプレビュー・複数枚投稿可能
+  * 投稿したい画像があっているかを確認
+  * 情報を多く投稿したいので複数枚投稿
+* リアル文字数カウント
+  * 文字数制限があるため現在何文字入力したかを表示(制限文字数5文字前から赤文字に)
+* コロナ対策情報を投稿可能
+  * どの程度コロナ対策をしているかを行った人が投稿できるため最新の情報が分かるようになる
 
 ### 検索機能
+[![Image from Gyazo](https://i.gyazo.com/14ca48e327a8414e28c1a5efbd538fbd.gif)](https://gyazo.com/14ca48e327a8414e28c1a5efbd538fbd)
+
+* 複数条件による検索機能(ransack)
+  * 知りたい条件を絞って検索する事ができる
+
 
 <br>
 
@@ -144,46 +174,84 @@ password: 1898
 
 ## Association
 - has_many :reviews
-- has_many :reviews_comments
+- has_many :comments
+- has_many :likes
 
-
+<br>
+<br>
 
 
 # reviews
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
-| name             | string     | null: false       |
+| faclity_name     | string     | null: false       |
 | hotel_type_id    | integer    | null; false       |
 | grade_id         | integer    | null: false       | 
 | season_id        | integer    | null: false       |
 | region_id        | integer    | null: false       |
-| count_id         | integer    | null: false       |
+| student_count_id | integer    | null: false       |
 | price            | integer    |                   |
 | text             | text       | null: false       |
 | safety           | text       | null: false       |
 | user             | references | foreign_key: true |
 
 ## Association
-belongs_to :user
-has_many   :reviews_comments
+- belongs_to :user
+- has_many   :comments
+- has_many :likes
 
+<br>
+<br>
 
-# reviews_comments
+# comments
+
+| Column           |  Type      | Options           |
+| ---------------- | ---------  | ----------------- |
+| user             | references | foreign_key: true |
+| review           | references | foreign_key: true | 
+| content          | text       |                   |
+
+## Association
+- belongs_to :user
+- belongs_to :review
+
+<br>
+<br>
+
+# likes
 
 | Column           |  Type      | Options           |
 | ---------------- | ---------  | ----------------- |
 | user             | references | foreign_key: true |
 | review           | references | foreign_key: true | 
 
-## Association
-belongs_to :user
-belongs_to :review
+- belongs_to :user
+- belongs_to :review
+
+<br>
+<br>
+
+# 今後の課題点
+
+- 旅行会社のユーザーが企画した行程表を投稿システム作成
+  - 投稿できることによって興味を持った教員がDMで連絡ができるようにする
+- ユーザーが触ってみたいと思えるようなデザイン
 
 
 
-# likes
 
 # ローカルでの動作方法
 
- 作成中
+```:terminal
+% mkdir gakutabi
+% cd gakutabi
+% git clone https://github.com/kimino98/gakutabi.git
+% bundle install
+% yarn install
+% rails db:create
+% rails db:migrate
+```
+
+
+ 
