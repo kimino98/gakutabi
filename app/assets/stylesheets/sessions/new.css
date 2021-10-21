@@ -35,6 +35,10 @@
   margin-top: 20px;
 }
 
+.login-main .action .btn {
+  color: white;
+}
+
 /* スマホ表示時 */
 @media (max-width: 599px) {
   .login-main .login-box .form-group {
