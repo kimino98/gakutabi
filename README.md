@@ -152,8 +152,13 @@ password: 1898
   * Route53
   * ALB
   * ACM
+  * S3
 * Capistrano3
 * RSpec
+
+# インフラ構成図
+
+![AWSinfra](https://user-images.githubusercontent.com/82023221/139203896-f0035946-d417-473e-8813-8622d5cbe4a4.png)
 
 #  テスト
 - RSpec
