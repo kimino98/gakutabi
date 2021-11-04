@@ -128,6 +128,9 @@ password: 1898
   * 文字数制限があるため現在何文字入力したかを表示(制限文字数5文字前から赤文字に)
 * コロナ対策情報を投稿可能
   * どの程度コロナ対策をしているかを行った人が投稿できるため最新の情報が分かるようになる
+  <br>
+  <br>
+
 
 ### 検索機能
 [![Image from Gyazo](https://i.gyazo.com/14ca48e327a8414e28c1a5efbd538fbd.gif)](https://gyazo.com/14ca48e327a8414e28c1a5efbd538fbd)
@@ -135,6 +138,10 @@ password: 1898
 * 複数条件による検索機能(ransack)
   * 知りたい条件を絞って検索する事ができる
 
+### レスポンシブ機能(ハンバーガーメニュー)
+[![Image from Gyazo](https://i.gyazo.com/1ae9687312e87ca89fb6b851ab2b3fb2.gif)](https://gyazo.com/1ae9687312e87ca89fb6b851ab2b3fb2)
+
+* どこでも利用できるようにレスポンシブ対応
 
 <br>
 
