@@ -19,6 +19,8 @@ https://docs.google.com/presentation/d/1iYUxGW1AYfudC75bWHxQhs3iWQV7-vmraths-l8W
 <br>
 # 本番環境URL
 
+現在は非公開にしております。
+
 https://www.gakutabi.site/
 
 <Basic認証><br>
